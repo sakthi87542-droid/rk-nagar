@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TVK Complaint Box – R.K. Nagar Thoguthi</title>
+  <meta name="description" content="TVK R.K. Nagar Thoguthi – People's Grievance Centre. Report local problems easily.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <img src="assets/tvk-logo.png" alt="TVK Logo" class="hero-logo">
+    <div class="hero-tvk">TVK</div>
+    <div class="hero-party tamil" data-i18n="hero_party">Tamilaga Vettri Kazhagam</div>
+    <div class="hero-constituency tamil" data-i18n="hero_const">R.K. Nagar Thoguthi – மக்கள் குறை தீர்வு மையம்</div>
+    <p class="hero-desc tamil" data-i18n="hero_desc">
+      உங்கள் பகுதியில் உள்ள பிரச்சனைகளை பதிவு செய்யுங்கள். உங்கள் குரல், உங்கள் பகுதி வளர்ச்சிக்கு முக்கியம்.
+    </p>
+    <a href="report.html" class="btn-primary" data-i18n="hero_cta">📢 Report a Complaint</a>
+  </div>
+</section>
+
+<!-- COMPLAINT CATEGORIES -->
+<div style="background:#fff; padding: 60px 20px;">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-i18n="cat_title">Complaint Categories</h2>
+      <p class="tamil" data-i18n="cat_subtitle">Select your problem type</p>
+    </div>
+    <div class="category-grid" id="categoryGrid">
+      <div class="category-card" onclick="goCategory('Water Problems')">
+        <div class="emoji">💧</div>
+        <div class="label tamil" data-i18n="cat_water">Water Problems</div>
+      </div>
+      <div class="category-card" onclick="goCategory('Road & Pothole Problems')">
+        <div class="emoji">🛣️</div>
+        <div class="label tamil" data-i18n="cat_road">Road & Pothole Problems</div>
+      </div>
+      <div class="category-card" onclick="goCategory('Street Light Problems')">
+        <div class="emoji">💡</div>
+        <div class="label tamil" data-i18n="cat_light">Street Light Problems</div>
+      </div>
+      <div class="category-card" onclick="goCategory('Garbage & Sanitation')">
+        <div class="emoji">🗑️</div>
+        <div class="label tamil" data-i18n="cat_garbage">Garbage & Sanitation</div>
+      </div>
+      <div class="category-card" onclick="goCategory('Drainage Problems')">
+        <div class="emoji">🚰</div>
+        <div class="label tamil" data-i18n="cat_drainage">Drainage Problems</div>
+      </div>
+      <div class="category-card" onclick="goCategory('Public Health Issues')">
+        <div class="emoji">🏥</div>
+        <div class="label tamil" data-i18n="cat_health">Public Health Issues</div>
+      </div>
+      <div class="category-card" onclick="goCategory('Public Transport Issues')">
+        <div class="emoji">🚌</div>
+        <div class="label tamil" data-i18n="cat_transport">Public Transport Issues</div>
+      </div>
+      <div class="category-card" onclick="goCategory('Electricity Problems')">
+        <div class="emoji">⚡</div>
+        <div class="label tamil" data-i18n="cat_electricity">Electricity Problems</div>
+      </div>
+      <div class="category-card" onclick="goCategory('Public School Issues')">
+        <div class="emoji">🏫</div>
+        <div class="label tamil" data-i18n="cat_school">Public School Issues</div>
+      </div>
+      <div class="category-card" onclick="goCategory('Other Local Problems')">
+        <div class="emoji">📍</div>
+        <div class="label tamil" data-i18n="cat_other">Other Local Problems</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div style="background: var(--bg); padding: 60px 20px;">
+  <div class="container">
+    <div class="section-title">
+      <h2>How It Works</h2>
+      <p class="tamil">எப்படி புகார் பதிவு செய்வது</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;text-align:center;">
+      <div class="card">
+        <div style="font-size:40px;margin-bottom:12px">📝</div>
+        <h3 style="color:var(--red);margin-bottom:8px">1. Report</h3>
+        <p style="font-size:13px;color:var(--muted)" class="tamil">உங்கள் பிரச்சனையை பதிவு செய்யுங்கள்</p>
+      </div>
+      <div class="card">
+        <div style="font-size:40px;margin-bottom:12px">🎫</div>
+        <h3 style="color:var(--red);margin-bottom:8px">2. Get ID</h3>
+        <p style="font-size:13px;color:var(--muted)" class="tamil">புகார் ஐடி பெறுங்கள்</p>
+      </div>
+      <div class="card">
+        <div style="font-size:40px;margin-bottom:12px">🔍</div>
+        <h3 style="color:var(--red);margin-bottom:8px">3. Track</h3>
+        <p style="font-size:13px;color:var(--muted)" class="tamil">நிலையை கண்காணியுங்கள்</p>
+      </div>
+      <div class="card">
+        <div style="font-size:40px;margin-bottom:12px">✅</div>
+        <h3 style="color:var(--red);margin-bottom:8px">4. Resolved</h3>
+        <p style="font-size:13px;color:var(--muted)" class="tamil">பிரச்சனை தீர்வு பெறுங்கள்</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING ACTION BUTTON (mobile) -->
+<a href="report.html" class="fab" data-i18n="fab_label">📢 Report</a>
+
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>
+
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script>
+  function goCategory(cat) {
+    window.location.href = 'report.html?category=' + encodeURIComponent(cat);
+  }
+</script>
+</body>
+</html>
