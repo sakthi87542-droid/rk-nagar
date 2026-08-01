@@ -37,7 +37,7 @@ function injectNavbar() {
   const navHtml = `
   <nav class="navbar" id="mainNav">
     <div class="navbar-brand">
-      <img src="assets/tvk-logo.png" alt="TVK Logo" class="navbar-logo">
+      <img src="assets/tvk-logo.svg" alt="TVK Logo" class="navbar-logo">
       <div class="navbar-title">
         <span>TVK</span>
         <span class="tamil">தமிழக வெற்றிக் கழகம்</span>
@@ -62,7 +62,7 @@ function injectFooter() {
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="assets/tvk-logo.png" alt="TVK">
+        <img src="assets/tvk-logo.svg" alt="TVK">
         <h3>TVK Complaint Box</h3>
         <p class="tamil" data-i18n="footer_tagline">${t('footer_tagline')}</p>
         <p style="margin-top:6px;font-size:11px;color:rgba(255,255,255,0.5)">R.K. Nagar Thoguthi</p>
