@@ -56,12 +56,11 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 .navbar-logo {
-  height: 50px;
-  width: 50px;
-  border-radius: 8px;
-  object-fit: contain;
+  height: 40px;
+  width: 68px;
+  border-radius: 6px;
+  object-fit: cover;
   object-position: center;
-  background: #000;
   border: 2px solid var(--yellow);
 }
 
@@ -171,12 +170,12 @@ button { cursor: pointer; font-family: inherit; }
 .hero-inner { position: relative; z-index: 1; max-width: 700px; }
 
 .hero-logo {
-  width: 280px;
-  height: 320px;
-  object-fit: contain;
+  width: min(420px, 90vw);
+  height: auto;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
   object-position: center;
-  border-radius: 20px;
-  background: #000;
+  border-radius: 16px;
   border: 4px solid var(--yellow);
   box-shadow: 0 0 40px rgba(255,215,0,0.4), 0 0 80px rgba(204,0,0,0.3);
   margin: 0 auto 24px;
@@ -663,7 +662,7 @@ footer {
   .hamburger { display: block; }
   .fab       { display: flex; align-items: center; gap: 8px; }
 
-  .hero-logo { width: 200px; height: 240px; }
+  .hero-logo { width: min(320px, 88vw); aspect-ratio: 5 / 3; height: auto; }
   .category-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid    { grid-template-columns: repeat(2, 1fr); }
 

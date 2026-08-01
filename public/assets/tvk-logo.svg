@@ -1,75 +1,132 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480">
-  <!-- Black background -->
-  <rect width="400" height="480" fill="#000000"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
 
-  <!-- FLAG POLE -->
-  <line x1="200" y1="60" x2="180" y2="280" stroke="#888" stroke-width="5" stroke-linecap="round"/>
+  <!-- Red top stripe -->
+  <rect x="0" y="0" width="500" height="100" fill="#8B0000"/>
 
-  <!-- TVK FLAG - Red top stripe -->
-  <polygon points="200,60 340,80 340,130 200,110" fill="#CC0000"/>
-  <!-- TVK FLAG - Yellow middle stripe -->
-  <polygon points="200,110 340,130 340,175 200,155" fill="#FFD700"/>
-  <!-- TVK FLAG - Red bottom stripe -->
-  <polygon points="200,155 340,175 340,220 200,200" fill="#CC0000"/>
+  <!-- Yellow middle stripe -->
+  <rect x="0" y="100" width="500" height="100" fill="#FFD700"/>
 
-  <!-- Elephant on yellow stripe (simplified) -->
-  <ellipse cx="285" cy="152" rx="22" ry="14" fill="#ffffff" opacity="0.9"/>
-  <ellipse cx="273" cy="148" rx="12" ry="10" fill="#ffffff" opacity="0.9"/>
-  <!-- Elephant trunk -->
-  <path d="M266,152 Q258,165 262,172" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <!-- Elephant legs -->
-  <rect x="275" y="160" width="5" height="12" rx="2" fill="#ffffff" opacity="0.8"/>
-  <rect x="283" y="160" width="5" height="12" rx="2" fill="#ffffff" opacity="0.8"/>
-  <rect x="291" y="160" width="5" height="12" rx="2" fill="#ffffff" opacity="0.8"/>
+  <!-- Red bottom stripe -->
+  <rect x="0" y="200" width="500" height="100" fill="#8B0000"/>
 
-  <!-- Rising sun / lotus on red stripe (center symbol) -->
-  <circle cx="270" cy="105" r="14" fill="#FFD700" opacity="0.85"/>
-  <circle cx="270" cy="105" r="9" fill="#CC0000" opacity="0.9"/>
+  <!-- ═══ CENTER EMBLEM ═══ -->
+  <!-- Outer dark red circle -->
+  <circle cx="250" cy="150" r="62" fill="#8B0000" stroke="#FFD700" stroke-width="3"/>
 
-  <!-- PERSON - Body (white shirt) -->
-  <ellipse cx="195" cy="350" rx="45" ry="65" fill="#e8e8e8"/>
-  <!-- Shirt collar -->
-  <path d="M180,295 L195,320 L210,295" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
+  <!-- Green star ring (22 stars around circle) -->
+  <g fill="#228B22">
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(0,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(16.36,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(32.72,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(49.09,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(65.45,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(81.81,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(98.18,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(114.54,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(130.90,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(147.27,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(163.63,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(180,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(196.36,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(212.72,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(229.09,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(245.45,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(261.81,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(278.18,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(294.54,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(310.90,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(327.27,250,150) translate(0,-57)"/>
+    <polygon points="250,93 252,99 258,99 253,103 255,109 250,105 245,109 247,103 242,99 248,99" transform="rotate(343.63,250,150) translate(0,-57)"/>
+  </g>
 
-  <!-- PERSON - Head -->
-  <ellipse cx="195" cy="265" rx="32" ry="36" fill="#c8956c"/>
-  <!-- Hair -->
-  <ellipse cx="195" cy="245" rx="32" ry="18" fill="#1a1a1a"/>
-  <!-- Face features - eyes -->
-  <ellipse cx="185" cy="268" rx="4" ry="4.5" fill="#1a1a1a"/>
-  <ellipse cx="205" cy="268" rx="4" ry="4.5" fill="#1a1a1a"/>
-  <!-- Smile -->
-  <path d="M183,282 Q195,292 207,282" stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <!-- Beard -->
-  <path d="M175,278 Q195,300 215,278" fill="#1a1a1a" opacity="0.6"/>
-  <!-- Eyebrows -->
-  <path d="M180,260 Q185,256 190,260" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-  <path d="M200,260 Q205,256 210,260" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+  <!-- Inner circle -->
+  <circle cx="250" cy="150" r="46" fill="#8B0000"/>
 
-  <!-- Right arm raised holding flag -->
-  <path d="M215,300 Q240,250 200,195" stroke="#c8956c" stroke-width="18" fill="none" stroke-linecap="round"/>
-  <!-- Hand -->
-  <circle cx="200" cy="190" r="12" fill="#c8956c"/>
+  <!-- Lotus flower -->
+  <!-- Green base leaves -->
+  <ellipse cx="250" cy="168" rx="18" ry="7" fill="#228B22"/>
+  <ellipse cx="238" cy="165" rx="12" ry="5" fill="#228B22" transform="rotate(-20,238,165)"/>
+  <ellipse cx="262" cy="165" rx="12" ry="5" fill="#228B22" transform="rotate(20,262,165)"/>
 
-  <!-- Left arm -->
-  <path d="M175,310 Q145,340 150,370" stroke="#e8e8e8" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <!-- Pink lotus petals - outer -->
+  <ellipse cx="250" cy="148" rx="5" ry="18" fill="#E91E8C" opacity="0.9"/>
+  <ellipse cx="250" cy="148" rx="5" ry="18" fill="#E91E8C" opacity="0.9" transform="rotate(20,250,165)"/>
+  <ellipse cx="250" cy="148" rx="5" ry="18" fill="#E91E8C" opacity="0.9" transform="rotate(-20,250,165)"/>
+  <ellipse cx="250" cy="148" rx="5" ry="18" fill="#E91E8C" opacity="0.9" transform="rotate(40,250,165)"/>
+  <ellipse cx="250" cy="148" rx="5" ry="18" fill="#E91E8C" opacity="0.9" transform="rotate(-40,250,165)"/>
+  <ellipse cx="250" cy="148" rx="5" ry="18" fill="#E91E8C" opacity="0.9" transform="rotate(60,250,165)"/>
+  <ellipse cx="250" cy="148" rx="5" ry="18" fill="#E91E8C" opacity="0.9" transform="rotate(-60,250,165)"/>
+  <ellipse cx="250" cy="148" rx="5" ry="18" fill="#E91E8C" opacity="0.9" transform="rotate(80,250,165)"/>
+  <ellipse cx="250" cy="148" rx="5" ry="18" fill="#E91E8C" opacity="0.9" transform="rotate(-80,250,165)"/>
 
-  <!-- Bracelet on right wrist -->
-  <path d="M205,205 Q200,200 195,205" stroke="#FFD700" stroke-width="3" fill="none"/>
+  <!-- Pink lotus petals - inner brighter -->
+  <ellipse cx="250" cy="152" rx="3.5" ry="13" fill="#FF4DB8" opacity="1"/>
+  <ellipse cx="250" cy="152" rx="3.5" ry="13" fill="#FF4DB8" opacity="1" transform="rotate(30,250,165)"/>
+  <ellipse cx="250" cy="152" rx="3.5" ry="13" fill="#FF4DB8" opacity="1" transform="rotate(-30,250,165)"/>
+  <ellipse cx="250" cy="152" rx="3.5" ry="13" fill="#FF4DB8" opacity="1" transform="rotate(60,250,165)"/>
+  <ellipse cx="250" cy="152" rx="3.5" ry="13" fill="#FF4DB8" opacity="1" transform="rotate(-60,250,165)"/>
+  <ellipse cx="250" cy="152" rx="3.5" ry="13" fill="#FF4DB8" opacity="1" transform="rotate(90,250,165)"/>
 
-  <!-- TAMIL TEXT - தமிழக வெற்றிக் கழகம் -->
-  <text x="200" y="410" 
-        font-family="'Noto Sans Tamil', 'Tamil MN', serif" 
-        font-size="34" 
-        font-weight="bold" 
-        fill="#CC0000" 
-        text-anchor="middle"
-        letter-spacing="1">தமிழக வெற்றிக் கழகம்</text>
+  <!-- Lotus center -->
+  <circle cx="250" cy="158" r="6" fill="#FFD700"/>
+  <circle cx="250" cy="158" r="3" fill="#FF6600"/>
 
-  <!-- Subtitle text -->
-  <text x="200" y="448" 
-        font-family="'Noto Sans Tamil', 'Tamil MN', serif" 
-        font-size="16" 
-        fill="#FFD700" 
-        text-anchor="middle">பிறப்பொக்கும் எல்லா உயிர்க்கும்!</text>
+  <!-- ═══ LEFT ELEPHANT ═══ -->
+  <g transform="translate(85,100)">
+    <!-- Body -->
+    <ellipse cx="0" cy="45" rx="48" ry="38" fill="#A0A0A0"/>
+    <!-- Head -->
+    <ellipse cx="-28" cy="20" rx="30" ry="26" fill="#A8A8A8"/>
+    <!-- Ear -->
+    <ellipse cx="-46" cy="22" rx="16" ry="20" fill="#909090"/>
+    <ellipse cx="-46" cy="22" rx="10" ry="14" fill="#B8B8B8" opacity="0.4"/>
+    <!-- Trunk (curling down and forward) -->
+    <path d="M-52,32 Q-70,50 -65,72 Q-60,88 -50,90" stroke="#A0A0A0" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <path d="M-52,32 Q-70,50 -65,72 Q-60,88 -50,90" stroke="#909090" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <!-- Tusk -->
+    <path d="M-52,38 Q-72,44 -75,55" stroke="#F5F5DC" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- Eye -->
+    <circle cx="-36" cy="16" r="5" fill="#1a1a1a"/>
+    <circle cx="-35" cy="15" r="2" fill="white"/>
+    <!-- Front legs -->
+    <rect x="-20" y="75" width="18" height="35" rx="8" fill="#989898"/>
+    <rect x="3" y="75" width="18" height="35" rx="8" fill="#989898"/>
+    <!-- Back legs -->
+    <rect x="22" y="75" width="18" height="33" rx="8" fill="#909090"/>
+    <rect x="42" y="72" width="18" height="30" rx="8" fill="#909090"/>
+    <!-- Tail -->
+    <path d="M46,42 Q60,50 58,65" stroke="#888" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Raised front leg -->
+    <rect x="-22" y="55" width="18" height="28" rx="8" fill="#989898" transform="rotate(-25,-13,60)"/>
+  </g>
+
+  <!-- ═══ RIGHT ELEPHANT (mirrored) ═══ -->
+  <g transform="translate(415,100) scale(-1,1)">
+    <!-- Body -->
+    <ellipse cx="0" cy="45" rx="48" ry="38" fill="#A0A0A0"/>
+    <!-- Head -->
+    <ellipse cx="-28" cy="20" rx="30" ry="26" fill="#A8A8A8"/>
+    <!-- Ear -->
+    <ellipse cx="-46" cy="22" rx="16" ry="20" fill="#909090"/>
+    <ellipse cx="-46" cy="22" rx="10" ry="14" fill="#B8B8B8" opacity="0.4"/>
+    <!-- Trunk -->
+    <path d="M-52,32 Q-70,50 -65,72 Q-60,88 -50,90" stroke="#A0A0A0" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <path d="M-52,32 Q-70,50 -65,72 Q-60,88 -50,90" stroke="#909090" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <!-- Tusk -->
+    <path d="M-52,38 Q-72,44 -75,55" stroke="#F5F5DC" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- Eye -->
+    <circle cx="-36" cy="16" r="5" fill="#1a1a1a"/>
+    <circle cx="-35" cy="15" r="2" fill="white"/>
+    <!-- Front legs -->
+    <rect x="-20" y="75" width="18" height="35" rx="8" fill="#989898"/>
+    <rect x="3" y="75" width="18" height="35" rx="8" fill="#989898"/>
+    <!-- Back legs -->
+    <rect x="22" y="75" width="18" height="33" rx="8" fill="#909090"/>
+    <rect x="42" y="72" width="18" height="30" rx="8" fill="#909090"/>
+    <!-- Tail -->
+    <path d="M46,42 Q60,50 58,65" stroke="#888" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Raised front leg -->
+    <rect x="-22" y="55" width="18" height="28" rx="8" fill="#989898" transform="rotate(-25,-13,60)"/>
+  </g>
+
 </svg>
