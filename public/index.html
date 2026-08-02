@@ -698,15 +698,47 @@
       margin-top: 3px;
       opacity: 0.85;
     }
+    /* Horizontal gold divider between the two rows */
+    .minister-row-divider {
+      width: min(300px, 80vw);
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--yellow), var(--red), var(--yellow), transparent);
+      margin: 24px auto 0;
+      border-radius: 1px;
+      opacity: 0.7;
+    }
+
+    /* Single centred card row */
+    .ministers-row-single {
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .ministers-row-single .minister-block {
+      max-width: 240px;
+      flex: none;
+    }
+
+    /* Digital painting on black bg — screen blend makes black invisible */
+    .minister-photo-screen {
+      mix-blend-mode: screen;
+      border-radius: 12px;
+      filter:
+        drop-shadow(0 0 28px rgba(255,215,0,0.45))
+        drop-shadow(0 6px 32px rgba(204,0,0,0.35))
+        brightness(1.05);
+    }
+
     @media(max-width:600px) {
       .ministers-row { gap: 14px; }
       .minister-block { max-width: 160px; }
       .minister-photo { height: 170px; }
+      .ministers-row-single .minister-block { max-width: 180px; }
     }
     @media(max-width:400px) {
       .ministers-row { gap: 8px; }
       .minister-block { max-width: 130px; }
       .minister-photo { height: 140px; }
+      .ministers-row-single .minister-block { max-width: 150px; }
     }
 
     /* ── SCROLLBAR ── */
@@ -877,6 +909,20 @@
           <div class="minister-name">மாண்புமிகு<br>Dr.N.மரியவில்சன்</div>
           <div class="minister-qual">B.Tech, MBA</div>
           <div class="minister-desig">நித்துறை அமைச்சர்</div>
+        </div>
+
+      </div>
+
+      <!-- Horizontal gold divider row -->
+      <div class="minister-row-divider"></div>
+
+      <!-- Leader row (single centred card) -->
+      <div class="ministers-row ministers-row-single">
+
+        <div class="minister-block">
+          <img src="assets/leader-new.jpg" alt="தளபதி T.ராஜேஷ்" class="minister-photo minister-photo-screen">
+          <div class="minister-name">தளபதி T.ராஜேஷ்</div>
+          <div class="minister-desig">மாவட்ட பொறுப்பாளர்</div>
         </div>
 
       </div>
