@@ -618,9 +618,9 @@
       border-radius: 0;
       display: block;
       margin: 0 auto;
-      /* Bottom fade blends seamlessly into the dark hero background */
-      -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
-      mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+      /* Fade all 4 edges so no square crop line is visible */
+      -webkit-mask-image: radial-gradient(ellipse 85% 80% at 50% 40%, black 40%, transparent 100%);
+      mask-image: radial-gradient(ellipse 85% 80% at 50% 40%, black 40%, transparent 100%);
       filter:
         drop-shadow(0 0 40px rgba(255,215,0,0.22))
         drop-shadow(0 16px 48px rgba(0,0,0,0.75));
