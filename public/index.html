@@ -603,6 +603,16 @@
     .wave-red { background: var(--red); }
     .wave-svg  { display: block; width: 100%; overflow: hidden; line-height: 0; }
 
+    /* ── LEADER SCREEN WRAP — pure black bg so screen-blend works ── */
+    .leader-screen-wrap {
+      background: #000000;
+      border-radius: 16px;
+      display: inline-block;
+      overflow: hidden;
+      line-height: 0;
+      box-shadow: 0 0 32px rgba(255,215,0,0.35), 0 0 60px rgba(204,0,0,0.25);
+    }
+
     /* ── MINISTERS ROW (side-by-side) ── */
     .ministers-row {
       display: flex;
@@ -718,15 +728,19 @@
       flex: none;
     }
 
-    /* Digital painting on black bg — screen blend makes black invisible */
+    /* Digital painting — screen blend on pure-black wrap makes bg invisible */
     .minister-photo-screen {
       mix-blend-mode: screen;
-      border-radius: 12px;
-      filter:
-        drop-shadow(0 0 28px rgba(255,215,0,0.45))
-        drop-shadow(0 6px 32px rgba(204,0,0,0.35))
-        brightness(1.05);
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border-radius: 0;
+      filter: brightness(1.05) contrast(1.05);
     }
+    @media(max-width:600px) { .minister-photo-screen { height: 170px; } }
+    @media(max-width:400px) { .minister-photo-screen { height: 140px; } }
 
     @media(max-width:600px) {
       .ministers-row { gap: 14px; }
@@ -920,7 +934,9 @@
       <div class="ministers-row ministers-row-single">
 
         <div class="minister-block">
-          <img src="assets/leader-new.jpg" alt="தளபதி T.ராஜேஷ்" class="minister-photo minister-photo-screen">
+          <div class="leader-screen-wrap">
+            <img src="assets/leader-new.jpg" alt="தளபதி T.ராஜேஷ்" class="minister-photo minister-photo-screen" style="mix-blend-mode:screen;display:block;margin:0;">
+          </div>
           <div class="minister-name">தளபதி T.ராஜேஷ்</div>
           <div class="minister-desig">மாவட்ட பொறுப்பாளர்</div>
         </div>
