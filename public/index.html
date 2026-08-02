@@ -116,7 +116,14 @@
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(135deg, #0a0000 0%, #1a0000 30%, #2a0000 60%, #0a0000 100%);
+      background: linear-gradient(180deg,
+        var(--red-dark) 0%,
+        var(--red) 22%,
+        var(--yellow) 44%,
+        var(--yellow-light) 50%,
+        var(--yellow) 56%,
+        var(--red) 78%,
+        var(--red-dark) 100%);
       position: relative; overflow: hidden;
       min-height: 100vh;
       display: flex; align-items: center; justify-content: center;
@@ -126,18 +133,17 @@
       content: '';
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse at 50% 40%, rgba(204,0,0,0.35) 0%, transparent 60%),
-        radial-gradient(ellipse at 20% 80%, rgba(255,215,0,0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(255,215,0,0.08) 0%, transparent 50%);
+        radial-gradient(ellipse at 50% 40%, rgba(255,255,255,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 80%, rgba(204,0,0,0.25) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(204,0,0,0.25) 0%, transparent 50%);
       pointer-events: none;
     }
-    /* Diagonal stripe accent */
+    /* TVK stripe accent top */
     .hero::after {
       content: '';
-      position: absolute; top: 0; left: -40%; right: -40%;
+      position: absolute; top: 0; left: 0; right: 0;
       height: 8px;
-      background: repeating-linear-gradient(90deg, var(--red) 0px, var(--red) 40px, var(--yellow) 40px, var(--yellow) 80px);
-      opacity: 0.6;
+      background: repeating-linear-gradient(90deg, var(--red-dark) 0px, var(--red-dark) 33.3%, var(--yellow) 33.3%, var(--yellow) 66.6%, var(--red-dark) 66.6%, var(--red-dark) 100%);
     }
 
     /* Side images – PNG cutout style */
@@ -186,28 +192,33 @@
 
     .hero-tvk {
       font-size: clamp(64px,14vw,110px); font-weight: 900; line-height: 1;
-      background: linear-gradient(135deg, var(--red-vivid) 0%, var(--yellow) 50%, var(--red-vivid) 100%);
+      background: linear-gradient(135deg, var(--red-dark) 0%, var(--red-vivid) 40%, var(--red-dark) 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text; letter-spacing: 8px;
       animation: fadeInDown 0.8s ease;
       text-shadow: none;
+      filter: drop-shadow(0 2px 12px rgba(204,0,0,0.5));
     }
     .hero-party {
-      font-size: clamp(14px,3.5vw,20px); color: var(--yellow); font-weight: 700;
+      font-size: clamp(14px,3.5vw,20px); color: var(--red-dark); font-weight: 800;
       margin-top: 6px; letter-spacing: 2px;
       animation: fadeInUp 0.8s ease 0.2s both;
       font-family: 'Noto Sans Tamil', sans-serif;
+      text-shadow: 0 1px 6px rgba(255,255,255,0.5);
     }
     .hero-constituency {
-      font-size: clamp(13px,2.5vw,16px); color: rgba(255,255,255,0.88);
+      font-size: clamp(13px,2.5vw,16px); color: var(--red-dark);
       margin-top: 8px; animation: fadeInUp 0.8s ease 0.3s both;
       font-family: 'Noto Sans Tamil', sans-serif;
+      font-weight: 700;
+      text-shadow: 0 1px 4px rgba(255,255,255,0.6);
     }
     .hero-desc {
-      font-size: 13px; color: rgba(255,255,255,0.68);
+      font-size: 13px; color: var(--red-dark);
       margin: 14px auto 0; line-height: 1.9; max-width: 480px;
       animation: fadeInUp 0.8s ease 0.4s both;
       font-family: 'Noto Sans Tamil', sans-serif;
+      font-weight: 600;
     }
 
     /* Center 4th image */
@@ -522,7 +533,7 @@
 
     /* ── FOOTER ── */
     footer {
-      background: linear-gradient(135deg, #0a0000, #1a0000);
+      background: linear-gradient(180deg, var(--red-dark) 0%, var(--red) 40%, var(--yellow) 70%, var(--yellow-dark) 100%);
       color: white; padding: 50px 20px 20px;
       border-top: 4px solid var(--yellow);
     }
@@ -530,17 +541,18 @@
       max-width: 1100px; margin: 0 auto;
       display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 32px; padding-bottom: 32px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(139,0,0,0.3);
     }
     .footer-logo { height: 64px; width: 64px; border-radius: 50%; object-fit: cover; object-position: top center; border: 3px solid var(--yellow); margin-bottom: 12px; }
-    .footer-brand h3 { color: var(--yellow); font-size: 17px; margin-bottom: 5px; }
-    .footer-brand p  { font-size: 12px; color: rgba(255,255,255,0.6); font-family: 'Noto Sans Tamil', sans-serif; }
-    .footer-links h4 { color: var(--yellow); font-size: 13px; margin-bottom: 14px; letter-spacing: 0.5px; }
-    .footer-links a  { display: block; font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 7px; transition: var(--transition); }
-    .footer-links a:hover { color: var(--yellow); padding-left: 4px; }
+    .footer-brand h3 { color: var(--red-dark); font-size: 17px; margin-bottom: 5px; text-shadow: 0 1px 3px rgba(255,255,255,0.4); }
+    .footer-brand p  { font-size: 12px; color: var(--red-dark); font-family: 'Noto Sans Tamil', sans-serif; font-weight: 600; }
+    .footer-links h4 { color: var(--red-dark); font-size: 13px; margin-bottom: 14px; letter-spacing: 0.5px; font-weight: 800; }
+    .footer-links a  { display: block; font-size: 12px; color: var(--red-dark); margin-bottom: 7px; transition: var(--transition); font-weight: 600; }
+    .footer-links a:hover { color: var(--red-vivid); padding-left: 4px; }
     .footer-bottom {
       max-width: 1100px; margin: 20px auto 0;
-      text-align: center; font-size: 12px; color: rgba(255,255,255,0.4);
+      text-align: center; font-size: 12px; color: var(--red-dark);
+      font-weight: 600;
     }
 
     /* ── TABS ── */
@@ -651,33 +663,33 @@
       font-family: 'Noto Sans Tamil', 'Poppins', sans-serif;
       font-size: clamp(13px, 3vw, 17px);
       font-weight: 800;
-      color: var(--yellow);
+      color: var(--red-dark);
       letter-spacing: 0.3px;
       margin-top: 10px;
       line-height: 1.4;
-      text-shadow: 0 2px 16px rgba(255,215,0,0.4), 0 1px 4px rgba(0,0,0,0.9);
+      text-shadow: 0 1px 6px rgba(255,255,255,0.6);
       animation: ministerFadeIn 1s ease 0.45s both;
     }
     .minister-mla {
       font-family: 'Noto Sans Tamil', 'Poppins', sans-serif;
       font-size: clamp(12px, 2.6vw, 15px);
       font-weight: 900;
-      color: var(--yellow);
-      background: rgba(204,0,0,0.45);
-      border: 1.5px solid var(--yellow);
+      color: white;
+      background: var(--red);
+      border: 1.5px solid var(--red-dark);
       border-radius: 20px;
       padding: 3px 12px;
       display: inline-block;
       margin-top: 7px;
       letter-spacing: 0.5px;
-      text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
       animation: ministerFadeIn 1s ease 0.5s both;
     }
     .minister-desig {
       font-family: 'Noto Sans Tamil', sans-serif;
       font-size: clamp(11px, 2.2vw, 13px);
-      font-weight: 500;
-      color: rgba(255,255,255,0.85);
+      font-weight: 600;
+      color: var(--red-dark);
       margin-top: 5px;
       line-height: 1.6;
       letter-spacing: 0.2px;
@@ -686,8 +698,8 @@
     .minister-desig2 {
       font-family: 'Noto Sans Tamil', sans-serif;
       font-size: clamp(10px, 1.9vw, 12px);
-      font-weight: 500;
-      color: rgba(255,215,0,0.82);
+      font-weight: 600;
+      color: var(--red-dark);
       margin-top: 4px;
       line-height: 1.55;
       letter-spacing: 0.1px;
@@ -697,19 +709,19 @@
       font-family: 'Noto Sans Tamil', sans-serif;
       font-size: clamp(10px, 2vw, 12px);
       font-weight: 700;
-      color: var(--red-vivid);
+      color: var(--red-dark);
       margin-top: 4px;
       letter-spacing: 1px;
       text-transform: uppercase;
       animation: ministerFadeIn 1s ease 0.65s both;
     }
-    /* Thin gold line above desig */
+    /* Thin red line above desig */
     .minister-desig::before {
       content: '';
       display: block;
       width: 44px;
       height: 2px;
-      background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+      background: linear-gradient(90deg, transparent, var(--red), transparent);
       margin: 8px auto 8px;
       border-radius: 1px;
     }
@@ -718,10 +730,10 @@
       font-family: 'Poppins', sans-serif;
       font-size: clamp(10px, 2vw, 12px);
       font-weight: 600;
-      color: var(--yellow);
+      color: var(--red);
       letter-spacing: 0.5px;
       margin-top: 3px;
-      opacity: 0.85;
+      opacity: 0.9;
     }
     /* Horizontal gold divider between the two rows */
     .minister-row-divider {
@@ -902,7 +914,7 @@
 
       <!-- TVK Party Logo -->
       <div class="hero-logo-wrap">
-        <img src="assets/hero-vijay-cutout.png" alt="தமிழக வெற்றிக் கழகம்" class="hero-logo-img-real" id="heroLogo">
+        <img src="assets/tvk-logo-cutout.png" alt="தமிழக வெற்றிக் கழகம்" class="hero-logo-img-real" id="heroLogo">
         <div class="hero-logo-glow-ring"></div>
       </div>
 
