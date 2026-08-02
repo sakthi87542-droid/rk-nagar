@@ -610,20 +610,17 @@
       width: 100%;
     }
     .minister-photo {
-      /* Large portrait — black bg blends into the dark hero via screen mode */
+      /* Transparent PNG cutout — no blend mode needed */
       width: min(420px, 88vw);
       height: auto;
-      object-fit: cover;
+      object-fit: contain;
       object-position: top center;
-      border-radius: 18px;
+      border-radius: 0;
       display: block;
       margin: 0 auto;
-      /* Black background becomes invisible on the dark hero */
-      mix-blend-mode: screen;
       filter:
-        drop-shadow(0 0 40px rgba(255,215,0,0.35))
-        drop-shadow(0 16px 48px rgba(255,215,0,0.2))
-        brightness(1.08) contrast(1.05);
+        drop-shadow(0 0 32px rgba(255,215,0,0.45))
+        drop-shadow(0 8px 40px rgba(204,0,0,0.35));
       animation: ministerFadeIn 1s ease 0.3s both;
     }
     @keyframes ministerFadeIn {
@@ -672,10 +669,10 @@
       border-radius: 1px;
     }
     @media(max-width:768px) {
-      .minister-photo { width: min(340px, 90vw); border-radius: 14px; }
+      .minister-photo { width: min(340px, 90vw); }
     }
     @media(max-width:480px) {
-      .minister-photo { width: min(280px, 92vw); border-radius: 10px; }
+      .minister-photo { width: min(280px, 92vw); }
     }
 
     /* ── SCROLLBAR ── */
@@ -828,7 +825,7 @@
 
       <!-- Minister Photo + Title — no card, no box, no border -->
       <div class="minister-block">
-        <img src="assets/minister-new.jpg" alt="மாண்புமிகு N. N. ஆனந்த்" class="minister-photo">
+        <img src="assets/minister-cutout.png" alt="மாண்புமிகு N. N. ஆனந்த்" class="minister-photo">
         <div class="minister-name">மாண்புமிகு N. N. ஆனந்த்</div>
         <div class="minister-desig">ஊரக வளர்ச்சி மற்றும் நீர் வளத்துறை அமைச்சர்</div>
         <div class="minister-role">கழக பொதுச்செயலாளர்</div>
