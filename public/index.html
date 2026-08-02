@@ -788,8 +788,8 @@
     /* ── HERO LOGO WRAP ── */
     .hero-logo-wrap {
       position: relative;
-      width: min(200px, 52vw);
-      margin: 0 auto 24px;
+      width: min(150px, 40vw);
+      margin: 0 auto 16px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -797,13 +797,13 @@
     .hero-logo-img-real {
       width: 100%;
       height: auto;
-      border-radius: 22px;
+      border-radius: 0;
       display: block;
       position: relative;
       z-index: 1;
       filter:
-        drop-shadow(0 0 40px rgba(255,215,0,0.5))
-        drop-shadow(0 0 80px rgba(204,0,0,0.4));
+        drop-shadow(0 0 24px rgba(255,215,0,0.55))
+        drop-shadow(0 0 48px rgba(204,0,0,0.4));
       animation: heroPulseReal 3s ease-in-out infinite;
     }
     @keyframes heroPulseReal {
@@ -955,6 +955,15 @@
       <div class="hero-btns">
         <a href="#report" class="btn-primary" onclick="showTab('report')" id="txt-hero-cta">📢 புகார் பதிவு செய்</a>
         <a href="#track"  class="btn-secondary" onclick="showTab('track')">🔍 புகாரை கண்காணி</a>
+      </div>
+
+      <!-- TVK Flag Hero Image -->
+      <div style="display:flex;justify-content:center;margin-top:28px;">
+        <img src="assets/tvk-flag-hero.jpeg" alt="TVK Flag"
+             style="width:min(260px,72vw);height:auto;border-radius:16px;
+                    border:3px solid var(--yellow);
+                    box-shadow:0 0 40px rgba(255,215,0,0.5),0 0 80px rgba(204,0,0,0.4);
+                    animation:fadeInUp 0.8s ease 0.7s both;">
       </div>
     </div>
   </section>
