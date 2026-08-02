@@ -658,7 +658,7 @@
       text-transform: uppercase;
       animation: ministerFadeIn 1s ease 0.65s both;
     }
-    /* Thin gold line separator */
+    /* Thin gold line separator (desig top bar) */
     .minister-desig::before {
       content: '';
       display: block;
@@ -668,11 +668,41 @@
       margin: 10px auto 10px;
       border-radius: 1px;
     }
+
+    /* Gold divider between the two minister blocks */
+    .minister-divider {
+      width: min(260px, 70vw);
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--yellow), var(--red), var(--yellow), transparent);
+      margin: 28px auto 0;
+      border-radius: 1px;
+      opacity: 0.7;
+    }
+
+    /* Qualification badge line */
+    .minister-qual {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(11px, 2.4vw, 13px);
+      font-weight: 600;
+      color: var(--yellow);
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+      opacity: 0.85;
+    }
+
+    /* Second minister photo — portrait head-shot, slightly smaller */
+    .minister-photo-2 {
+      width: min(320px, 80vw) !important;
+      margin-top: 6px;
+    }
+
     @media(max-width:768px) {
       .minister-photo { width: min(340px, 90vw); }
+      .minister-photo-2 { width: min(260px, 80vw) !important; }
     }
     @media(max-width:480px) {
       .minister-photo { width: min(280px, 92vw); }
+      .minister-photo-2 { width: min(220px, 82vw) !important; }
     }
 
     /* ── SCROLLBAR ── */
@@ -823,12 +853,24 @@
       <div class="hero-party" id="txt-hero-party">தமிழக வெற்றிக் கழகம்</div>
       <div class="hero-constituency" id="txt-hero-const">ஆர்.கே. நகர் தொகுதி – மக்கள் குறை தீர்வு மையம்</div>
 
-      <!-- Minister Photo + Title — no card, no box, no border -->
+      <!-- Minister 1 Photo + Title -->
       <div class="minister-block">
         <img src="assets/minister-cutout.png" alt="மாண்புமிகு N. N. ஆனந்த்" class="minister-photo">
         <div class="minister-name">மாண்புமிகு N. N. ஆனந்த்</div>
         <div class="minister-desig">ஊரக வளர்ச்சி மற்றும் நீர் வளத்துறை அமைச்சர்</div>
         <div class="minister-role">கழக பொதுச்செயலாளர்</div>
+      </div>
+
+      <!-- Gold divider between ministers -->
+      <div class="minister-divider"></div>
+
+      <!-- Minister 2 Photo + Title -->
+      <div class="minister-block">
+        <img src="assets/minister2-cutout.png" alt="மாண்புமிகு Dr.N.மரியவில்சன்" class="minister-photo minister-photo-2">
+        <div class="minister-name">மாண்புமிகு</div>
+        <div class="minister-name" style="margin-top:-6px;">Dr.N.மரியவில்சன்</div>
+        <div class="minister-qual">B.Tech, MBA</div>
+        <div class="minister-desig">நித்துறை அமைச்சர்</div>
       </div>
 
       <div class="hero-desc" id="txt-hero-desc">உங்கள் பகுதியில் உள்ள பிரச்சனைகளை பதிவு செய்யுங்கள். உங்கள் குரல், உங்கள் பகுதி வளர்ச்சிக்கு முக்கியம்.</div>
