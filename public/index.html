@@ -618,9 +618,9 @@
       border-radius: 0;
       display: block;
       margin: 0 auto;
-      /* Fade all 4 edges so no square crop line is visible */
-      -webkit-mask-image: radial-gradient(ellipse 85% 80% at 50% 40%, black 40%, transparent 100%);
-      mask-image: radial-gradient(ellipse 85% 80% at 50% 40%, black 40%, transparent 100%);
+      /* PNG has transparent rounded corners — fade only the bottom into the hero */
+      -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
       filter:
         drop-shadow(0 0 40px rgba(255,215,0,0.22))
         drop-shadow(0 16px 48px rgba(0,0,0,0.75));
@@ -828,7 +828,7 @@
 
       <!-- Minister Photo + Title — no card, no box, no border -->
       <div class="minister-block">
-        <img src="assets/minister.jpg" alt="மாண்புமிகு N. N. ஆனந்த்" class="minister-photo">
+        <img src="assets/minister.png" alt="மாண்புமிகு N. N. ஆனந்த்" class="minister-photo">
         <div class="minister-name">மாண்புமிகு N. N. ஆனந்த்</div>
         <div class="minister-desig">ஊரக வளர்ச்சி மற்றும் நீர் வளத்துறை அமைச்சர்</div>
         <div class="minister-role">கழக பொதுச்செயலாளர்</div>
