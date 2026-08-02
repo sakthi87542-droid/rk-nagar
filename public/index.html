@@ -603,6 +603,79 @@
     .wave-red { background: var(--red); }
     .wave-svg  { display: block; width: 100%; overflow: hidden; line-height: 0; }
 
+    /* ── MINISTER BLOCK ── */
+    .minister-block {
+      margin: 32px auto 8px;
+      text-align: center;
+      max-width: 340px;
+    }
+    .minister-photo {
+      width: min(220px, 58vw);
+      height: auto;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 0;
+      display: block;
+      margin: 0 auto;
+      /* soft bottom fade so photo bleeds into dark hero */
+      -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+      filter: drop-shadow(0 8px 32px rgba(255,215,0,0.18)) drop-shadow(0 2px 16px rgba(0,0,0,0.7));
+      animation: ministerFadeIn 1s ease 0.3s both;
+    }
+    @keyframes ministerFadeIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .minister-name {
+      font-family: 'Noto Sans Tamil', 'Poppins', sans-serif;
+      font-size: clamp(18px, 4.5vw, 26px);
+      font-weight: 800;
+      color: var(--yellow);
+      letter-spacing: 0.5px;
+      margin-top: 14px;
+      line-height: 1.3;
+      text-shadow: 0 2px 18px rgba(255,215,0,0.35), 0 1px 4px rgba(0,0,0,0.8);
+      animation: ministerFadeIn 1s ease 0.45s both;
+    }
+    .minister-desig {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: clamp(11px, 2.8vw, 14px);
+      font-weight: 500;
+      color: rgba(255,255,255,0.82);
+      margin-top: 6px;
+      line-height: 1.6;
+      letter-spacing: 0.2px;
+      animation: ministerFadeIn 1s ease 0.55s both;
+    }
+    .minister-role {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: clamp(11px, 2.6vw, 13px);
+      font-weight: 600;
+      color: var(--red-vivid);
+      margin-top: 4px;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      animation: ministerFadeIn 1s ease 0.65s both;
+    }
+    /* thin gold separator line between name and designation */
+    .minister-desig::before {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+      margin: 8px auto 8px;
+      border-radius: 1px;
+    }
+    @media(max-width:768px) {
+      .minister-photo { width: min(180px, 54vw); }
+      .minister-block { margin: 24px auto 4px; }
+    }
+    @media(max-width:480px) {
+      .minister-photo { width: min(160px, 62vw); }
+    }
+
     /* ── SCROLLBAR ── */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: #fff5f5; }
@@ -740,7 +813,8 @@
     <img id="heroRight" src="" alt="TVK Worker" class="hero-side-right" style="display:none;">
 
     <div class="hero-inner">
-      <!-- TVK Party Logo Image -->
+
+      <!-- TVK Party Logo -->
       <div class="hero-logo-wrap">
         <img src="assets/tvk-logo.jpg" alt="தமிழக வெற்றிக் கழகம்" class="hero-logo-img-real" id="heroLogo">
         <div class="hero-logo-glow-ring"></div>
@@ -749,10 +823,16 @@
       <div class="hero-tvk">TVK</div>
       <div class="hero-party" id="txt-hero-party">தமிழக வெற்றிக் கழகம்</div>
       <div class="hero-constituency" id="txt-hero-const">ஆர்.கே. நகர் தொகுதி – மக்கள் குறை தீர்வு மையம்</div>
-      <div class="hero-desc" id="txt-hero-desc">உங்கள் பகுதியில் உள்ள பிரச்சனைகளை பதிவு செய்யுங்கள். உங்கள் குரல், உங்கள் பகுதி வளர்ச்சிக்கு முக்கியம்.</div>
 
-      <!-- Center image (image 4) -->
-      <img id="heroCenterImg" src="" alt="TVK Center Visual" class="hero-center-img" style="display:none;">
+      <!-- Minister Photo + Title — no card, no box, no border -->
+      <div class="minister-block">
+        <img src="assets/minister.jpg" alt="மாண்புமிகு N. N. ஆனந்த்" class="minister-photo">
+        <div class="minister-name">மாண்புமிகு N. N. ஆனந்த்</div>
+        <div class="minister-desig">ஊரக வளர்ச்சி மற்றும் நீர் வளத்துறை அமைச்சர்</div>
+        <div class="minister-role">கழக பொதுச்செயலாளர்</div>
+      </div>
+
+      <div class="hero-desc" id="txt-hero-desc">உங்கள் பகுதியில் உள்ள பிரச்சனைகளை பதிவு செய்யுங்கள். உங்கள் குரல், உங்கள் பகுதி வளர்ச்சிக்கு முக்கியம்.</div>
 
       <div class="hero-btns">
         <a href="#report" class="btn-primary" onclick="showTab('report')" id="txt-hero-cta">📢 புகார் பதிவு செய்</a>
