@@ -761,21 +761,27 @@
     ::-webkit-scrollbar-track { background: #fff5f5; }
     ::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
 
-    /* ── NAVBAR LOGO (real image) ── */
-    .navbar-logo-real {
-      height: 52px;
-      width: 52px;
+    /* ── NAVBAR LOGO WRAP — black bg so screen-blend removes black ── */
+    .navbar-logo-wrap {
+      width: 52px; height: 52px;
       border-radius: 50%;
-      object-fit: cover;
-      object-position: top center;
+      background: #000;
       border: 3px solid var(--yellow);
       box-shadow: 0 0 14px rgba(255,215,0,0.6), 0 0 28px rgba(204,0,0,0.35);
+      overflow: hidden;
+      flex-shrink: 0;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: block;
     }
-    .navbar-logo-real:hover {
+    .navbar-logo-wrap:hover {
       transform: scale(1.1) rotate(-3deg);
       box-shadow: 0 0 22px rgba(255,215,0,0.9), 0 0 44px rgba(204,0,0,0.6);
+    }
+    .navbar-logo-real {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      mix-blend-mode: screen;
     }
 
     /* ── HERO LOGO WRAP ── */
@@ -787,20 +793,27 @@
       align-items: center;
       justify-content: center;
     }
-    .hero-logo-img-real {
-      width: 100%;
-      height: auto;
+    /* Black bg container so screen-blend works perfectly */
+    .hero-logo-bg {
+      background: #000;
       border-radius: 22px;
       border: 4px solid var(--yellow);
+      overflow: hidden;
       box-shadow:
         0 0 0 6px rgba(255,215,0,0.15),
         0 0 40px rgba(255,215,0,0.55),
         0 0 80px rgba(204,0,0,0.45),
         0 12px 40px rgba(0,0,0,0.6);
-      display: block;
       position: relative;
       z-index: 1;
+      width: 100%;
       animation: heroPulseReal 3s ease-in-out infinite;
+    }
+    .hero-logo-img-real {
+      width: 100%;
+      height: auto;
+      display: block;
+      mix-blend-mode: screen;
     }
     @keyframes heroPulseReal {
       0%,100% {
@@ -818,7 +831,7 @@
           0 12px 50px rgba(0,0,0,0.7);
       }
     }
-    /* Spinning glow ring behind the logo */
+    /* Spinning glow ring */
     .hero-logo-glow-ring {
       position: absolute;
       inset: -14px;
@@ -838,7 +851,7 @@
     }
     @media(max-width:768px) {
       .hero-logo-wrap { width: min(240px, 80vw); }
-      .navbar-logo-real { height: 44px; width: 44px; }
+      .navbar-logo-wrap { width: 44px; height: 44px; }
     }
     @media(max-width:480px) {
       .hero-logo-wrap { width: min(200px, 88vw); }
@@ -857,7 +870,9 @@
 <!-- NAVBAR -->
 <nav class="navbar" id="mainNav">
   <div class="navbar-brand">
-    <img src="assets/tvk-logo.jpg" alt="TVK Logo" class="navbar-logo navbar-logo-real" id="navLogoImg">
+    <div class="navbar-logo-wrap">
+      <img src="assets/tvk-logo.jpg" alt="TVK Logo" class="navbar-logo-real" id="navLogoImg">
+    </div>
     <div class="navbar-title">
       <span>TVK</span>
       <span>தமிழக வெற்றிக் கழகம்</span>
@@ -896,7 +911,9 @@
 
       <!-- TVK Party Logo -->
       <div class="hero-logo-wrap">
-        <img src="assets/tvk-logo.jpg" alt="தமிழக வெற்றிக் கழகம்" class="hero-logo-img-real" id="heroLogo">
+        <div class="hero-logo-bg">
+          <img src="assets/tvk-logo.jpg" alt="தமிழக வெற்றிக் கழகம்" class="hero-logo-img-real" id="heroLogo">
+        </div>
         <div class="hero-logo-glow-ring"></div>
       </div>
 
