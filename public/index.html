@@ -662,17 +662,35 @@
       max-width: 280px;
       text-align: center;
     }
-    /* Vertical gold divider between the two cards */
+    /* Each minister block – card background: dark red→amber→gold */
+    .minister-block-inner {
+      background: linear-gradient(160deg, #6B0000 0%, #B80000 45%, #C8A000 80%, #FFD700 100%);
+      border-radius: var(--radius);
+      border: 2px solid rgba(255,215,0,0.45);
+      padding: 16px 12px 18px;
+      box-shadow: 0 6px 28px rgba(0,0,0,0.55), 0 0 16px rgba(255,215,0,0.18);
+      transition: var(--transition);
+    }
+    .minister-block-inner:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.7), 0 0 28px rgba(255,215,0,0.4);
+      border-color: #FFD700;
+    }
+    /* Vertical divider between two minister cards */
     .minister-col-divider {
-      width: 2px;
+      width: 3px;
       align-self: stretch;
-      background: linear-gradient(to bottom, transparent, var(--yellow), var(--red), var(--yellow), transparent);
-      border-radius: 1px;
-      opacity: 0.65;
+      background: linear-gradient(to bottom,
+        transparent 0%,
+        #FFD700 20%,
+        #B80000 50%,
+        #FFD700 80%,
+        transparent 100%);
+      border-radius: 2px;
+      opacity: 0.85;
       flex-shrink: 0;
     }
     .minister-photo {
-      /* Transparent PNG cutout */
       width: 100%;
       max-width: 240px;
       height: 240px;
@@ -682,8 +700,8 @@
       display: block;
       margin: 0 auto;
       filter:
-        drop-shadow(0 0 28px rgba(255,215,0,0.45))
-        drop-shadow(0 6px 32px rgba(204,0,0,0.35));
+        drop-shadow(0 0 32px rgba(255,215,0,0.55))
+        drop-shadow(0 8px 24px rgba(107,0,0,0.65));
       animation: ministerFadeIn 1s ease 0.3s both;
     }
     @keyframes ministerFadeIn {
@@ -694,33 +712,34 @@
       font-family: 'Noto Sans Tamil', 'Poppins', sans-serif;
       font-size: clamp(13px, 3vw, 17px);
       font-weight: 800;
-      color: var(--red-dark);
+      color: #FFD700;
       letter-spacing: 0.3px;
       margin-top: 10px;
       line-height: 1.4;
-      text-shadow: 0 1px 6px rgba(255,255,255,0.6);
+      text-shadow: 0 1px 8px rgba(0,0,0,0.7);
       animation: ministerFadeIn 1s ease 0.45s both;
     }
     .minister-mla {
       font-family: 'Noto Sans Tamil', 'Poppins', sans-serif;
       font-size: clamp(12px, 2.6vw, 15px);
       font-weight: 900;
-      color: white;
-      background: var(--red);
-      border: 1.5px solid var(--red-dark);
+      color: #6B0000;
+      background: linear-gradient(90deg, #FFD700, #C8A000);
+      border: 1.5px solid #6B0000;
       border-radius: 20px;
-      padding: 3px 12px;
+      padding: 4px 14px;
       display: inline-block;
       margin-top: 7px;
       letter-spacing: 0.5px;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+      text-shadow: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
       animation: ministerFadeIn 1s ease 0.5s both;
     }
     .minister-desig {
       font-family: 'Noto Sans Tamil', sans-serif;
       font-size: clamp(11px, 2.2vw, 13px);
       font-weight: 600;
-      color: var(--red-dark);
+      color: rgba(255,230,150,0.92);
       margin-top: 5px;
       line-height: 1.6;
       letter-spacing: 0.2px;
@@ -730,7 +749,7 @@
       font-family: 'Noto Sans Tamil', sans-serif;
       font-size: clamp(10px, 1.9vw, 12px);
       font-weight: 600;
-      color: var(--red-dark);
+      color: rgba(255,230,150,0.85);
       margin-top: 4px;
       line-height: 1.55;
       letter-spacing: 0.1px;
@@ -739,20 +758,21 @@
     .minister-role {
       font-family: 'Noto Sans Tamil', sans-serif;
       font-size: clamp(10px, 2vw, 12px);
-      font-weight: 700;
-      color: var(--red-dark);
+      font-weight: 800;
+      color: #FFD700;
       margin-top: 4px;
       letter-spacing: 1px;
       text-transform: uppercase;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
       animation: ministerFadeIn 1s ease 0.65s both;
     }
-    /* Thin red line above desig */
+    /* Gold line above desig */
     .minister-desig::before {
       content: '';
       display: block;
       width: 44px;
       height: 2px;
-      background: linear-gradient(90deg, transparent, var(--red), transparent);
+      background: linear-gradient(90deg, transparent, #FFD700, #B80000, #FFD700, transparent);
       margin: 8px auto 8px;
       border-radius: 1px;
     }
@@ -760,22 +780,28 @@
     .minister-qual {
       font-family: 'Poppins', sans-serif;
       font-size: clamp(10px, 2vw, 12px);
-      font-weight: 600;
-      color: var(--red);
+      font-weight: 700;
+      color: #FFD700;
       letter-spacing: 0.5px;
       margin-top: 3px;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    }
+    /* Horizontal divider between the two rows */
+    .minister-row-divider {
+      width: min(380px, 88vw);
+      height: 3px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        #6B0000 15%,
+        #B80000 30%,
+        #FFD700 50%,
+        #B80000 70%,
+        #6B0000 85%,
+        transparent 100%);
+      margin: 28px auto 0;
+      border-radius: 2px;
       opacity: 0.9;
     }
-    /* Horizontal gold divider between the two rows */
-    .minister-row-divider {
-      width: min(300px, 80vw);
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--yellow), var(--red), var(--yellow), transparent);
-      margin: 24px auto 0;
-      border-radius: 1px;
-      opacity: 0.7;
-    }
-
     /* Single centred card row */
     .ministers-row-single {
       justify-content: center;
@@ -957,37 +983,43 @@
 
         <!-- Minister 1 -->
         <div class="minister-block">
-          <img src="assets/minister-cutout.png" alt="மாண்புமிகு N. N. ஆனந்த்" class="minister-photo">
-          <div class="minister-name">மாண்புமிகு<br>N. N. ஆனந்த்</div>
-          <div class="minister-mla">தி.நகர் சட்டமன்ற உறுப்பினர்</div>
-          <div class="minister-desig">ஊரக வளர்ச்சி மற்றும்<br>நீர் வளத்துறை அமைச்சர்</div>
-          <div class="minister-role">கழக பொதுச்செயலாளர்</div>
+          <div class="minister-block-inner">
+            <img src="assets/minister-cutout.png" alt="மாண்புமிகு N. N. ஆனந்த்" class="minister-photo">
+            <div class="minister-name">மாண்புமிகு<br>N. N. ஆனந்த்</div>
+            <div class="minister-mla">தி.நகர் சட்டமன்ற உறுப்பினர்</div>
+            <div class="minister-desig">ஊரக வளர்ச்சி மற்றும்<br>நீர் வளத்துறை அமைச்சர்</div>
+            <div class="minister-role">கழக பொதுச்செயலாளர்</div>
+          </div>
         </div>
 
-        <!-- Vertical gold divider -->
+        <!-- Vertical divider -->
         <div class="minister-col-divider"></div>
 
         <!-- Minister 2 -->
         <div class="minister-block">
-          <img src="assets/minister2-cutout.png" alt="மாண்புமிகு Dr.N.மரியவில்சன்" class="minister-photo">
-          <div class="minister-name">மாண்புமிகு<br>Dr.N.மரியவில்சன்</div>
-          <div class="minister-desig">ஆர்.கே.நகர் தொகுதி<br>சட்டமன்ற உறுப்பினர்</div>
-          <div class="minister-desig2">த.ந.அ. நிதிதிட்டமிடல் மற்றும்<br>மேம்பாட்டு அமைச்சர்</div>
-          <div class="minister-qual">B.Tech, MBA, MLA</div>
+          <div class="minister-block-inner">
+            <img src="assets/minister2-cutout.png" alt="மாண்புமிகு Dr.N.மரியவில்சன்" class="minister-photo">
+            <div class="minister-name">மாண்புமிகு<br>Dr.N.மரியவில்சன்</div>
+            <div class="minister-desig">ஆர்.கே.நகர் தொகுதி<br>சட்டமன்ற உறுப்பினர்</div>
+            <div class="minister-desig2">த.ந.அ. நிதிதிட்டமிடல் மற்றும்<br>மேம்பாட்டு அமைச்சர்</div>
+            <div class="minister-qual">B.Tech, MBA, MLA</div>
+          </div>
         </div>
 
       </div>
 
-      <!-- Horizontal gold divider row -->
+      <!-- Horizontal divider -->
       <div class="minister-row-divider"></div>
 
       <!-- Leader row (single centred card) -->
       <div class="ministers-row ministers-row-single">
 
         <div class="minister-block">
-          <img src="assets/leader-cutout.png" alt="தளபதி T.ராஜேஷ்" class="minister-photo">
-          <div class="minister-name">தளபதி T.ராஜேஷ்</div>
-          <div class="minister-desig">சென்னை வடக்கு மாவட்ட<br>இணை செயலாளர்</div>
+          <div class="minister-block-inner">
+            <img src="assets/leader-cutout.png" alt="தளபதி T.ராஜேஷ்" class="minister-photo">
+            <div class="minister-name">தளபதி T.ராஜேஷ்</div>
+            <div class="minister-desig">சென்னை வடக்கு மாவட்ட<br>இணை செயலாளர்</div>
+          </div>
         </div>
 
       </div>
