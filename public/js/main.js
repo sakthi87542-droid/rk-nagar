@@ -65,7 +65,7 @@ function injectFooter() {
         <img src="assets/tvk-logo.svg" alt="TVK">
         <h3>TVK Complaint Box</h3>
         <p class="tamil" data-i18n="footer_tagline">${t('footer_tagline')}</p>
-        <p style="margin-top:6px;font-size:11px;color:rgba(255,255,255,0.5)">R.K. Nagar Thoguthi</p>
+        <p style="margin-top:6px;font-size:11px;color:rgba(255,215,100,0.6)">R.K. Nagar Thoguthi</p>
       </div>
       <div class="footer-links">
         <h4>Quick Links</h4>

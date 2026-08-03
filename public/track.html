@@ -9,15 +9,15 @@
 <body>
 <div id="navbar-placeholder"></div>
 
-<div style="background: linear-gradient(135deg,#cc0000,#990000); padding:40px 20px; text-align:center;">
-  <h1 style="color:white;font-size:clamp(22px,5vw,34px);font-weight:800" data-i18n="track_title">Track Your Complaint</h1>
-  <p style="color:rgba(255,255,255,0.8);margin-top:8px;font-size:14px" class="tamil">உங்கள் புகாரின் நிலையை கண்காணிக்கவும்</p>
+<div style="background:linear-gradient(135deg,#6B0000,#B80000,#B84000,#C8A000);padding:40px 20px;text-align:center;border-bottom:3px solid #FFD700;">
+  <h1 style="color:#FFD700;font-size:clamp(22px,5vw,34px);font-weight:800" data-i18n="track_title">Track Your Complaint</h1>
+  <p style="color:rgba(255,230,150,0.85);margin-top:8px;font-size:14px" class="tamil">உங்கள் புகாரின் நிலையை கண்காணிக்கவும்</p>
 </div>
 
 <div class="container" style="padding:40px 20px;max-width:700px;">
   <div class="card" style="padding:32px;">
     <div style="display:flex;gap:12px;">
-      <input class="form-control" id="trackInput" 
+      <input class="form-control" id="trackInput"
         data-i18n-placeholder="track_input"
         placeholder="Enter Complaint ID (e.g. TVK-20240101-1234)"
         style="flex:1;">
@@ -28,13 +28,13 @@
   <!-- RESULT -->
   <div id="trackResult" style="margin-top:24px;display:none;">
     <div class="card" style="padding:32px;">
-      <h3 style="color:var(--red);margin-bottom:20px;font-size:18px;">Complaint Status</h3>
+      <h3 style="color:var(--yellow);margin-bottom:20px;font-size:18px;">Complaint Status</h3>
 
       <!-- PROGRESS TRACKER -->
       <div class="progress-tracker" id="progressTracker"></div>
 
       <!-- DETAILS -->
-      <div id="complaintDetails" style="margin-top:24px;border-top:1px solid var(--border);padding-top:20px;">
+      <div id="complaintDetails" style="margin-top:24px;border-top:1px solid rgba(184,64,0,0.4);padding-top:20px;">
       </div>
     </div>
   </div>

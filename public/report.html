@@ -9,9 +9,9 @@
 <body>
 <div id="navbar-placeholder"></div>
 
-<div style="background: linear-gradient(135deg,#cc0000,#990000); padding: 40px 20px; text-align:center;">
-  <h1 style="color:white;font-size:clamp(22px,5vw,34px);font-weight:800" data-i18n="form_title">Report a Complaint</h1>
-  <p style="color:rgba(255,255,255,0.8);margin-top:8px;font-size:14px" class="tamil">உங்கள் பிரச்சனையை இங்கே பதிவு செய்யுங்கள்</p>
+<div style="background:linear-gradient(135deg,#6B0000,#B80000,#B84000,#C8A000);padding:40px 20px;text-align:center;border-bottom:3px solid #FFD700;">
+  <h1 style="color:#FFD700;font-size:clamp(22px,5vw,34px);font-weight:800" data-i18n="form_title">Report a Complaint</h1>
+  <p style="color:rgba(255,230,150,0.85);margin-top:8px;font-size:14px" class="tamil">உங்கள் பிரச்சனையை இங்கே பதிவு செய்யுங்கள்</p>
 </div>
 
 <div class="container" style="padding:40px 20px; max-width:700px;">
@@ -73,7 +73,7 @@
         </div>
       </div>
 
-      <div id="formError" style="color:var(--red);font-size:13px;margin-bottom:12px;display:none;"></div>
+      <div id="formError" style="color:var(--yellow);font-size:13px;margin-bottom:12px;display:none;padding:10px;background:rgba(107,0,0,0.4);border-radius:8px;border-left:4px solid var(--yellow);"></div>
 
       <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:16px;" id="submitBtn">
         <span data-i18n="form_submit">Submit Complaint</span>
@@ -92,8 +92,8 @@
     <p style="font-size:13px;color:var(--muted);margin-bottom:20px;">Save this ID to track your complaint status</p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
       <a id="trackLink" href="track.html" class="btn-secondary">🔍 Track Complaint</a>
-      <button onclick="document.getElementById('successModal').classList.remove('open');document.getElementById('complaintForm').reset();" 
-        style="background:none;border:2px solid var(--border);padding:10px 20px;border-radius:50px;font-size:14px;cursor:pointer;">
+      <button onclick="document.getElementById('successModal').classList.remove('open');document.getElementById('complaintForm').reset();"
+        style="background:rgba(107,0,0,0.4);border:2px solid rgba(255,215,0,0.4);color:var(--text);padding:10px 20px;border-radius:50px;font-size:14px;cursor:pointer;">
         Report Another
       </button>
     </div>

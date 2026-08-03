@@ -6,13 +6,30 @@
   <title>Admin Panel – TVK Complaint Box</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    body { background: var(--bg); }
+    body { background: linear-gradient(180deg,#1A0A00 0%,#2A0D00 50%,#1A0A00 100%); min-height:100vh; }
     .admin-login { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px; }
-    .login-card  { background:white; border-radius:var(--radius-lg); padding:40px 32px; max-width:400px; width:100%; box-shadow:var(--shadow-lg); text-align:center; }
+    .login-card  {
+      background:linear-gradient(135deg,#2A0D00,#3A1500);
+      border-radius:var(--radius-lg); padding:40px 32px;
+      max-width:400px; width:100%;
+      box-shadow:var(--shadow-lg);
+      text-align:center;
+      border-top:6px solid var(--yellow);
+      border:2px solid rgba(255,215,0,0.25);
+    }
     .admin-panel { max-width:1200px; margin:0 auto; padding:30px 20px; }
     .filter-bar  { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:20px; }
-    .filter-select { padding:8px 14px; border:2px solid var(--border); border-radius:8px; font-size:13px; outline:none; }
-    .status-select { padding:4px 8px; border-radius:6px; font-size:12px; border:1px solid var(--border); cursor:pointer; }
+    .filter-select {
+      padding:8px 14px; border:2px solid rgba(184,64,0,0.4);
+      border-radius:8px; font-size:13px; outline:none;
+      background:#3A1500; color:var(--text);
+    }
+    .filter-select:focus { border-color:var(--yellow); }
+    .status-select {
+      padding:4px 8px; border-radius:6px; font-size:12px;
+      border:1px solid rgba(184,64,0,0.4); cursor:pointer;
+      background:#3A1500; color:var(--text);
+    }
   </style>
 </head>
 <body>
@@ -20,8 +37,8 @@
 <!-- LOGIN PANEL -->
 <div class="admin-login" id="loginPanel">
   <div class="login-card">
-    <img src="assets/tvk-logo.svg" alt="TVK" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--red);margin-bottom:20px;">
-    <h2 style="color:var(--red);margin-bottom:6px;">Admin Login</h2>
+    <img src="assets/tvk-logo.svg" alt="TVK" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--yellow);margin-bottom:20px;box-shadow:0 0 20px rgba(255,215,0,0.3);">
+    <h2 style="color:var(--yellow);margin-bottom:6px;">Admin Login</h2>
     <p style="font-size:13px;color:var(--muted);margin-bottom:24px" class="tamil">TVK Complaint Box – நிர்வாக நுழைவு</p>
 
     <div class="form-group" style="text-align:left;">
@@ -32,19 +49,19 @@
       <label>Password</label>
       <input class="form-control" type="password" id="adminPass" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()">
     </div>
-    <div id="loginError" style="color:var(--red);font-size:13px;margin-bottom:12px;display:none;"></div>
+    <div id="loginError" style="color:var(--yellow);font-size:13px;margin-bottom:12px;display:none;padding:8px;background:rgba(107,0,0,0.4);border-radius:6px;"></div>
     <button class="btn-primary" onclick="doLogin()" style="width:100%;justify-content:center;">Login</button>
   </div>
 </div>
 
 <!-- ADMIN PANEL -->
 <div id="adminPanel" style="display:none;">
-  <div style="background:var(--red);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;">
+  <div style="background:linear-gradient(90deg,#6B0000,#B80000,#B84000);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--yellow);">
     <div style="display:flex;align-items:center;gap:12px;">
       <img src="assets/tvk-logo.svg" style="height:40px;width:40px;border-radius:50%;object-fit:cover;border:2px solid var(--yellow);">
-      <span style="color:white;font-weight:700;font-size:16px;">TVK Admin Panel</span>
+      <span style="color:#FFD700;font-weight:700;font-size:16px;">TVK Admin Panel</span>
     </div>
-    <button onclick="doLogout()" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:white;padding:8px 18px;border-radius:20px;font-size:13px;cursor:pointer;">Logout</button>
+    <button onclick="doLogout()" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.5);color:var(--yellow);padding:8px 18px;border-radius:20px;font-size:13px;cursor:pointer;font-weight:700;">Logout</button>
   </div>
 
   <div class="admin-panel">
@@ -75,7 +92,7 @@
         <option>Other Local Problems</option>
       </select>
       <input class="filter-select" id="filterWard" placeholder="Filter by Ward" oninput="renderTable()" style="width:140px;">
-      <button onclick="loadComplaints()" style="background:var(--red);color:white;border:none;padding:8px 16px;border-radius:8px;font-size:13px;cursor:pointer;">🔄 Refresh</button>
+      <button onclick="loadComplaints()" style="background:linear-gradient(135deg,#6B0000,#B84000);color:#FFD700;border:1.5px solid var(--yellow);padding:8px 16px;border-radius:8px;font-size:13px;cursor:pointer;font-weight:700;">🔄 Refresh</button>
     </div>
 
     <div class="table-wrap">
