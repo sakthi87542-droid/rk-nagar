@@ -663,11 +663,13 @@
       max-width: 280px;
       text-align: center;
     }
-    /* Each minister block – card background: dark red→amber→gold */
+    /* Each minister block – dark red top → yellow bottom */
     .minister-block-inner {
-      background: linear-gradient(160deg, #6B0000 0%, #B80000 45%, #C8A000 80%, #FFD700 100%);
+      background: linear-gradient(180deg, #6B0000 0%, #8B0000 40%, #B80000 65%, #FFD700 100%);
       border-radius: var(--radius);
-      border: 2px solid rgba(255,215,0,0.45);
+      border: 2px solid rgba(255,215,0,0.5);
+      border-top: 4px solid #6B0000;
+      border-bottom: 4px solid #FFD700;
       padding: 16px 12px 18px;
       box-shadow: 0 6px 28px rgba(0,0,0,0.55), 0 0 16px rgba(255,215,0,0.18);
       transition: var(--transition);
