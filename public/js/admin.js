@@ -46,11 +46,22 @@ async function loadComplaints() {
       headers: { 'Authorization': 'Bearer ' + token },
     });
     if (res.status === 401) { doLogout(); return; }
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      console.error('Load complaints failed:', err.error || res.status);
+      document.getElementById('tableBody').innerHTML =
+        `<tr><td colspan="9" style="text-align:center;padding:30px;color:#c0392b;">
+          Failed to load complaints: ${err.error || 'Server error'}. Check environment variables on Vercel.
+        </td></tr>`;
+      return;
+    }
     allComplaints = await res.json();
     renderStats();
     renderTable();
   } catch (err) {
     console.error('Load complaints error:', err);
+    document.getElementById('tableBody').innerHTML =
+      `<tr><td colspan="9" style="text-align:center;padding:30px;color:#c0392b;">Network error – ${err.message}</td></tr>`;
   }
 }
 
@@ -118,7 +129,7 @@ function renderTable() {
 async function updateStatus(id, status) {
   const token = localStorage.getItem('tvk-admin-token');
   try {
-    await fetch(`/api/admin/${id}`, {
+    const res = await fetch(`/api/admin/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -126,11 +137,18 @@ async function updateStatus(id, status) {
       },
       body: JSON.stringify({ status }),
     });
-    // update locally
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      console.error('Update status failed:', err.error || res.status);
+      alert('Failed to update status: ' + (err.error || 'Server error'));
+      return;
+    }
+    // update locally and re-render
     const c = allComplaints.find(x => x._id === id);
-    if (c) { c.status = status; renderStats(); }
+    if (c) { c.status = status; renderStats(); renderTable(); }
   } catch (err) {
     console.error('Update status error:', err);
+    alert('Network error: ' + err.message);
   }
 }
 
