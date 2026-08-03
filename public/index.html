@@ -9,28 +9,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --red: #CC0000;
-      --red-dark: #8B0000;
-      --red-vivid: #FF1111;
+      --red: #B80000;
+      --red-dark: #6B0000;
+      --red-vivid: #E02020;
       --yellow: #FFD700;
-      --yellow-dark: #E6B800;
-      --yellow-light: #FFF176;
+      --yellow-dark: #C8A000;
+      --yellow-light: #FFE680;
+      --amber: #B84000;
       --white: #FFFFFF;
-      --bg: #FFF5F5;
-      --text: #1a1a1a;
-      --muted: #666;
-      --border: #f0c0c0;
+      --bg: #1A0A00;
+      --text: #FFE9B0;
+      --muted: #C8956A;
+      --border: #5A2A00;
       --radius: 14px;
       --radius-lg: 22px;
-      --shadow: 0 4px 24px rgba(204,0,0,0.13);
-      --shadow-lg: 0 10px 40px rgba(204,0,0,0.22);
+      --shadow: 0 4px 24px rgba(0,0,0,0.5);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,0.7);
       --transition: all 0.3s cubic-bezier(.4,0,.2,1);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Poppins', 'Noto Sans Tamil', sans-serif;
-      background: var(--bg);
+      background: linear-gradient(180deg, #1A0A00 0%, #2A0D00 50%, #1A0A00 100%);
       color: var(--text);
       line-height: 1.6;
       font-size: 15px;
@@ -116,14 +117,14 @@
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(180deg,
-        var(--red-dark) 0%,
-        var(--red) 22%,
-        var(--yellow) 44%,
-        var(--yellow-light) 50%,
-        var(--yellow) 56%,
-        var(--red) 78%,
-        var(--red-dark) 100%);
+      background: linear-gradient(160deg,
+        #6B0000 0%,
+        #B80000 20%,
+        #B84000 40%,
+        #C8A000 55%,
+        #B84000 70%,
+        #B80000 85%,
+        #6B0000 100%);
       position: relative; overflow: hidden;
       min-height: 100vh;
       display: flex; align-items: center; justify-content: center;
@@ -192,29 +193,28 @@
 
     .hero-tvk {
       font-size: clamp(64px,14vw,110px); font-weight: 900; line-height: 1;
-      background: linear-gradient(135deg, var(--red-dark) 0%, var(--red-vivid) 40%, var(--red-dark) 100%);
+      background: linear-gradient(135deg, #FFD700 0%, #FFFFFF 40%, #FFD700 70%, #C8A000 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text; letter-spacing: 8px;
       animation: fadeInDown 0.8s ease;
       text-shadow: none;
-      filter: drop-shadow(0 2px 12px rgba(204,0,0,0.5));
+      filter: drop-shadow(0 2px 16px rgba(255,215,0,0.6));
     }
     .hero-party {
-      font-size: clamp(14px,3.5vw,20px); color: var(--red-dark); font-weight: 800;
+      font-size: clamp(14px,3.5vw,20px); color: var(--yellow); font-weight: 800;
       margin-top: 6px; letter-spacing: 2px;
       animation: fadeInUp 0.8s ease 0.2s both;
       font-family: 'Noto Sans Tamil', sans-serif;
-      text-shadow: 0 1px 6px rgba(255,255,255,0.5);
+      text-shadow: 0 1px 8px rgba(0,0,0,0.6);
     }
     .hero-constituency {
-      font-size: clamp(13px,2.5vw,16px); color: var(--red-dark);
+      font-size: clamp(13px,2.5vw,16px); color: rgba(255,230,150,0.92);
       margin-top: 8px; animation: fadeInUp 0.8s ease 0.3s both;
       font-family: 'Noto Sans Tamil', sans-serif;
       font-weight: 700;
-      text-shadow: 0 1px 4px rgba(255,255,255,0.6);
     }
     .hero-desc {
-      font-size: 13px; color: var(--red-dark);
+      font-size: 13px; color: rgba(255,215,100,0.80);
       margin: 14px auto 0; line-height: 1.9; max-width: 480px;
       animation: fadeInUp 0.8s ease 0.4s both;
       font-family: 'Noto Sans Tamil', sans-serif;
@@ -240,28 +240,28 @@
     }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
-      background: linear-gradient(135deg, var(--red), var(--red-dark));
-      color: white; border: 2.5px solid var(--yellow);
+      background: linear-gradient(135deg, #6B0000 0%, #B80000 50%, #B84000 100%);
+      color: #FFD700; border: 2.5px solid var(--yellow);
       padding: 14px 30px; border-radius: 50px;
       font-size: 15px; font-weight: 700;
       transition: var(--transition);
-      box-shadow: 0 6px 24px rgba(204,0,0,0.5);
+      box-shadow: 0 6px 24px rgba(107,0,0,0.6), 0 0 14px rgba(255,215,0,0.2);
     }
     .btn-primary:hover {
-      transform: translateY(-3px); background: linear-gradient(135deg, var(--red-vivid), var(--red));
-      box-shadow: 0 10px 32px rgba(204,0,0,0.7);
+      transform: translateY(-3px); background: linear-gradient(135deg, #B84000, #B80000, #6B0000);
+      box-shadow: 0 10px 32px rgba(107,0,0,0.8), 0 0 24px rgba(255,215,0,0.35);
     }
     .btn-secondary {
       display: inline-flex; align-items: center; gap: 8px;
-      background: var(--yellow); color: var(--red-dark);
-      border: none; padding: 14px 28px; border-radius: 50px;
+      background: linear-gradient(135deg, #FFD700, #C8A000); color: #3A0000;
+      border: 2px solid rgba(107,0,0,0.35); padding: 14px 28px; border-radius: 50px;
       font-size: 15px; font-weight: 800;
       transition: var(--transition);
-      box-shadow: 0 4px 16px rgba(255,215,0,0.4);
+      box-shadow: 0 4px 16px rgba(200,160,0,0.4);
     }
     .btn-secondary:hover {
-      background: var(--yellow-dark); transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(255,215,0,0.6);
+      background: linear-gradient(135deg, #C8A000, #FFD700); transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(200,160,0,0.6);
     }
 
     @keyframes fadeInDown { from{opacity:0;transform:translateY(-30px)} to{opacity:1;transform:translateY(0)} }
@@ -272,12 +272,15 @@
     .container { max-width: 1100px; margin: 0 auto; }
     .section-title { text-align: center; margin-bottom: 44px; }
     .section-title h2 {
-      font-size: clamp(22px,5vw,32px); font-weight: 800; color: var(--red);
+      font-size: clamp(22px,5vw,32px); font-weight: 800;
+      background: linear-gradient(135deg, #FFD700, #B84000);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
       display: inline-block; position: relative;
     }
     .section-title h2::after {
       content: ''; display: block; width: 70px; height: 4px;
-      background: linear-gradient(90deg, var(--red), var(--yellow));
+      background: linear-gradient(90deg, #B80000, #FFD700, #B80000);
       margin: 10px auto 0; border-radius: 2px;
     }
     .section-title .sub {
@@ -286,58 +289,58 @@
     }
 
     /* ── CATEGORY SECTION ── */
-    .cat-section { background: white; }
+    .cat-section { background: linear-gradient(135deg, #1A0A00, #2A0D00); }
     .category-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 18px;
     }
     .category-card {
-      background: white; border-radius: var(--radius);
+      background: linear-gradient(135deg, #2A0D00, #3A1500); border-radius: var(--radius);
       padding: 26px 14px; text-align: center;
-      border: 2px solid var(--border); cursor: pointer;
+      border: 2px solid rgba(184,64,0,0.3); cursor: pointer;
       transition: var(--transition); box-shadow: var(--shadow);
       position: relative; overflow: hidden;
     }
     .category-card::before {
       content: ''; position: absolute;
-      inset: 0; background: linear-gradient(135deg, rgba(204,0,0,0.06), rgba(255,215,0,0.06));
+      inset: 0; background: linear-gradient(135deg, rgba(184,64,0,0.15), rgba(255,215,0,0.08));
       opacity: 0; transition: var(--transition);
     }
-    .category-card:hover { border-color: var(--red); transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .category-card:hover { border-color: var(--yellow); transform: translateY(-6px); box-shadow: 0 8px 32px rgba(107,0,0,0.6), 0 0 16px rgba(255,215,0,0.2); }
     .category-card:hover::before { opacity: 1; }
     .cat-emoji { font-size: 36px; margin-bottom: 10px; }
     .cat-label { font-size: 12px; font-weight: 700; color: var(--text); font-family: 'Noto Sans Tamil', sans-serif; }
     .cat-label-en { font-size: 11px; color: var(--muted); margin-top: 3px; }
 
     /* ── HOW IT WORKS ── */
-    .how-section { background: linear-gradient(135deg, #FFF5F5 0%, #FFF9E6 100%); }
+    .how-section { background: linear-gradient(135deg, #1A0A00 0%, #2A0D00 100%); }
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 24px;
     }
     .step-card {
-      background: white; border-radius: var(--radius);
+      background: linear-gradient(135deg, #2A0D00, #3A1500); border-radius: var(--radius);
       padding: 30px 20px; text-align: center;
-      box-shadow: var(--shadow); border-top: 4px solid var(--red);
+      box-shadow: var(--shadow); border-top: 4px solid var(--yellow);
       transition: var(--transition);
     }
-    .step-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .step-card:hover { transform: translateY(-5px); box-shadow: 0 10px 36px rgba(107,0,0,0.6); }
     .step-num {
       width: 48px; height: 48px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--red), var(--red-dark));
-      color: white; font-size: 20px; font-weight: 800;
+      background: linear-gradient(135deg, #6B0000, #B84000);
+      color: #FFD700; font-size: 20px; font-weight: 800;
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 14px;
     }
     .step-icon { font-size: 38px; margin-bottom: 12px; }
-    .step-card h3 { color: var(--red); font-size: 16px; margin-bottom: 8px; }
+    .step-card h3 { color: var(--yellow); font-size: 16px; margin-bottom: 8px; }
     .step-card p { font-size: 12px; color: var(--muted); font-family: 'Noto Sans Tamil', sans-serif; }
 
     /* ── STATS BANNER ── */
     .stats-banner {
-      background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 50%, var(--red-dark) 100%);
+      background: linear-gradient(135deg, #6B0000 0%, #B80000 35%, #B84000 65%, #C8A000 100%);
       padding: 50px 20px;
       border-top: 4px solid var(--yellow);
       border-bottom: 4px solid var(--yellow);
@@ -357,31 +360,31 @@
     .stat-label-ta { font-size: 11px; color: rgba(255,255,255,0.65); font-family: 'Noto Sans Tamil', sans-serif; }
 
     /* ── COMPLAINT FORM SECTION ── */
-    .form-section { background: white; }
+    .form-section { background: linear-gradient(135deg, #1A0A00, #2A0D00); }
     .form-header {
-      background: linear-gradient(135deg, var(--red-dark), var(--red));
+      background: linear-gradient(135deg, #6B0000, #B80000, #B84000);
       padding: 40px 20px; text-align: center;
       border-bottom: 4px solid var(--yellow);
     }
     .form-header h1 { color: white; font-size: clamp(20px,5vw,30px); font-weight: 800; }
     .form-header p  { color: rgba(255,255,255,0.8); margin-top: 6px; font-size: 14px; font-family: 'Noto Sans Tamil', sans-serif; }
     .form-wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px; }
-    .form-card { background: white; border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-lg); border: 1px solid var(--border); }
+    .form-card { background: linear-gradient(135deg, #2A0D00, #3A1500); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-lg); border: 1px solid rgba(184,64,0,0.35); }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .form-group { margin-bottom: 18px; }
     .form-group label { display: block; font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; font-family: 'Noto Sans Tamil', sans-serif; }
     .form-control {
-      width: 100%; padding: 12px 16px; border: 2px solid var(--border);
+      width: 100%; padding: 12px 16px; border: 2px solid rgba(184,64,0,0.4);
       border-radius: 10px; font-size: 14px; font-family: inherit;
-      background: #fffafA; transition: var(--transition); outline: none; color: var(--text);
+      background: #3A1500; transition: var(--transition); outline: none; color: var(--text);
     }
-    .form-control:focus { border-color: var(--red); box-shadow: 0 0 0 3px rgba(204,0,0,0.1); background: white; }
+    .form-control:focus { border-color: var(--yellow); box-shadow: 0 0 0 3px rgba(255,215,0,0.15); background: #4A1800; }
     textarea.form-control { resize: vertical; min-height: 110px; }
     .photo-upload-label {
       display: flex; align-items: center; gap: 10px;
-      border: 2px dashed var(--border); border-radius: 10px; padding: 16px;
+      border: 2px dashed rgba(184,64,0,0.5); border-radius: 10px; padding: 16px;
       cursor: pointer; transition: var(--transition);
-      background: #fffafa; font-size: 13px; color: var(--muted);
+      background: #3A1500; font-size: 13px; color: var(--muted);
     }
     .photo-upload-label:hover { border-color: var(--red); color: var(--red); }
     #photoInput { display: none; }
@@ -396,8 +399,8 @@
     .location-btn:hover { border-color: var(--red); color: var(--red); }
     .form-submit-btn {
       width: 100%; padding: 16px;
-      background: linear-gradient(135deg, var(--red), var(--red-dark));
-      color: white; border: 2.5px solid var(--yellow);
+      background: linear-gradient(135deg, #6B0000, #B80000, #B84000);
+      color: #FFD700; border: 2.5px solid var(--yellow);
       border-radius: 50px; font-size: 16px; font-weight: 800;
       transition: var(--transition); margin-top: 8px;
       box-shadow: 0 6px 24px rgba(204,0,0,0.4);
@@ -406,13 +409,13 @@
     .form-submit-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(204,0,0,0.6); }
 
     /* ── TRACK SECTION ── */
-    .track-section { background: linear-gradient(135deg, #FFF5F5, #FFFDE7); }
+    .track-section { background: linear-gradient(135deg, #1A0A00, #2A0D00); }
     .track-wrap { max-width: 600px; margin: 0 auto; }
     .track-input-wrap { display: flex; gap: 10px; }
     .track-input-wrap input { flex: 1; }
     .track-btn {
-      background: linear-gradient(135deg, var(--red), var(--red-dark));
-      color: white; border: 2px solid var(--yellow);
+      background: linear-gradient(135deg, #6B0000, #B80000, #B84000);
+      color: #FFD700; border: 2px solid var(--yellow);
       padding: 12px 24px; border-radius: 10px;
       font-size: 14px; font-weight: 700; white-space: nowrap;
       transition: var(--transition);
@@ -420,9 +423,9 @@
     .track-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(204,0,0,0.4); }
     .track-result { margin-top: 28px; display: none; }
     .track-card {
-      background: white; border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #2A0D00, #3A1500); border-radius: var(--radius-lg);
       padding: 28px; box-shadow: var(--shadow-lg);
-      border-left: 6px solid var(--red);
+      border-left: 6px solid var(--yellow);
     }
     .progress-tracker {
       display: flex; align-items: center; margin: 24px 0;
@@ -445,9 +448,9 @@
     .admin-wrap { max-width: 1100px; margin: 0 auto; }
     .admin-login-card {
       max-width: 420px; margin: 0 auto;
-      background: white; border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #2A0D00, #3A1500); border-radius: var(--radius-lg);
       padding: 44px 36px; box-shadow: var(--shadow-lg);
-      text-align: center; border-top: 6px solid var(--red);
+      text-align: center; border-top: 6px solid var(--yellow);
     }
     .admin-logo {
       width: 88px; height: 88px; border-radius: 50%;
@@ -457,7 +460,7 @@
     }
     #adminPanel { display: none; }
     .admin-header {
-      background: linear-gradient(90deg, var(--red-dark), var(--red));
+      background: linear-gradient(90deg, #6B0000, #B80000, #B84000);
       padding: 18px 28px; display: flex; align-items: center;
       justify-content: space-between; border-bottom: 3px solid var(--yellow);
     }
@@ -469,89 +472,90 @@
     }
     .filter-select:focus { border-color: var(--red); }
     .table-wrap { overflow-x: auto; border-radius: var(--radius); box-shadow: var(--shadow); }
-    table { width: 100%; border-collapse: collapse; background: white; }
-    th { background: var(--red); color: white; padding: 13px 16px; text-align: left; font-size: 12px; font-weight: 700; white-space: nowrap; }
-    td { padding: 12px 16px; border-bottom: 1px solid #f8e8e8; font-size: 12px; }
-    tr:hover td { background: #fff5f5; }
+    table { width: 100%; border-collapse: collapse; background: #2A0D00; }
+    th { background: linear-gradient(90deg, #6B0000, #B84000); color: #FFD700; padding: 13px 16px; text-align: left; font-size: 12px; font-weight: 700; white-space: nowrap; }
+    td { padding: 12px 16px; border-bottom: 1px solid rgba(184,64,0,0.25); font-size: 12px; color: var(--text); }
+    tr:hover td { background: rgba(184,64,0,0.15); }
     .badge { display: inline-block; padding: 4px 11px; border-radius: 20px; font-size: 11px; font-weight: 700; }
-    .badge-submitted { background: #e3f2fd; color: #1565c0; }
-    .badge-review    { background: #fff3e0; color: #e65100; }
-    .badge-assigned  { background: #f3e5f5; color: #6a1b9a; }
-    .badge-progress  { background: #fff9c4; color: #f57f17; }
-    .badge-resolved  { background: #e8f5e9; color: #2e7d32; }
+    .badge-submitted { background: rgba(107,0,0,0.4);  color: #FFB0B0; border: 1px solid #B80000; }
+    .badge-review    { background: rgba(184,64,0,0.4); color: #FFD080; border: 1px solid #B84000; }
+    .badge-assigned  { background: rgba(200,160,0,0.3);color: #FFE080; border: 1px solid #C8A000; }
+    .badge-progress  { background: rgba(107,0,0,0.3);  color: #FFD700; border: 1px solid #B80000; }
+    .badge-resolved  { background: rgba(0,80,0,0.35);  color: #88FF88; border: 1px solid #006600; }
     .status-select {
       padding: 4px 8px; border-radius: 6px; font-size: 11px;
       border: 1px solid var(--border); cursor: pointer; background: white;
     }
     .admin-stat-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap: 16px; margin-bottom: 24px; }
     .admin-stat {
-      background: white; border-radius: var(--radius); padding: 20px;
-      text-align: center; box-shadow: var(--shadow); border-top: 4px solid var(--red);
+      background: linear-gradient(135deg, #2A0D00, #3A1500); border-radius: var(--radius); padding: 20px;
+      text-align: center; box-shadow: var(--shadow); border-top: 4px solid var(--yellow);
     }
-    .admin-stat .num { font-size: 36px; font-weight: 800; color: var(--red); }
+    .admin-stat .num { font-size: 36px; font-weight: 800; color: var(--yellow); }
     .admin-stat .lbl { font-size: 12px; color: var(--muted); margin-top: 4px; }
 
     /* ── MODAL ── */
     .modal-overlay {
       display: none; position: fixed; inset: 0;
-      background: rgba(0,0,0,0.65); z-index: 3000;
+      background: rgba(0,0,0,0.75); z-index: 3000;
       align-items: center; justify-content: center; padding: 20px;
     }
     .modal-overlay.open { display: flex; }
     .modal {
-      background: white; border-radius: var(--radius-lg);
+      background: linear-gradient(145deg, #2A0D00, #3A1500); border-radius: var(--radius-lg);
       padding: 44px 36px; max-width: 500px; width: 100%;
-      text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-      border-top: 6px solid var(--red);
+      text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+      border: 2px solid rgba(255,215,0,0.3);
+      border-top: 6px solid var(--yellow);
       animation: modalIn 0.4s cubic-bezier(.34,1.56,.64,1);
     }
     @keyframes modalIn { from{opacity:0;transform:scale(0.8)} to{opacity:1;transform:scale(1)} }
     .modal-icon { font-size: 56px; margin-bottom: 16px; }
-    .modal h3 { font-size: 22px; font-weight: 800; color: var(--red); margin-bottom: 8px; }
+    .modal h3 { font-size: 22px; font-weight: 800; color: var(--yellow); margin-bottom: 8px; }
     .complaint-id {
-      background: linear-gradient(135deg, #fff5f5, #fffde7);
-      border: 2px dashed var(--red); border-radius: 12px;
+      background: rgba(107,0,0,0.4);
+      border: 2px dashed var(--yellow); border-radius: 12px;
       padding: 16px 24px; font-size: 22px; font-weight: 800;
-      color: var(--red-dark); letter-spacing: 2px;
+      color: var(--yellow); letter-spacing: 2px;
       margin: 18px 0; font-family: monospace;
     }
 
     /* ── FAB ── */
     .fab {
       display: none; position: fixed; bottom: 24px; right: 20px; z-index: 999;
-      background: linear-gradient(135deg, var(--red), var(--red-dark));
-      color: white; border: 2.5px solid var(--yellow);
+      background: linear-gradient(135deg, #6B0000, #B80000, #B84000);
+      color: #FFD700; border: 2.5px solid var(--yellow);
       padding: 15px 22px; border-radius: 50px;
       font-size: 14px; font-weight: 800;
-      box-shadow: 0 6px 24px rgba(204,0,0,0.6);
+      box-shadow: 0 6px 24px rgba(107,0,0,0.7), 0 0 14px rgba(255,215,0,0.25);
       animation: fabPulse 2.2s ease-in-out infinite;
     }
     @keyframes fabPulse {
-      0%,100%{box-shadow:0 6px 24px rgba(204,0,0,0.6)}
-      50%    {box-shadow:0 6px 40px rgba(204,0,0,0.9),0 0 0 8px rgba(204,0,0,0.15)}
+      0%,100%{box-shadow:0 6px 24px rgba(107,0,0,0.7),0 0 14px rgba(255,215,0,0.25)}
+      50%    {box-shadow:0 6px 40px rgba(107,0,0,0.9),0 0 28px rgba(255,215,0,0.5),0 0 0 8px rgba(107,0,0,0.15)}
     }
 
     /* ── FOOTER ── */
     footer {
-      background: linear-gradient(180deg, var(--red-dark) 0%, var(--red) 40%, var(--yellow) 70%, var(--yellow-dark) 100%);
-      color: white; padding: 50px 20px 20px;
+      background: linear-gradient(180deg, #2A0D00 0%, #6B0000 40%, #B84000 70%, #C8A000 100%);
+      color: var(--text); padding: 50px 20px 20px;
       border-top: 4px solid var(--yellow);
     }
     .footer-inner {
       max-width: 1100px; margin: 0 auto;
       display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 32px; padding-bottom: 32px;
-      border-bottom: 1px solid rgba(139,0,0,0.3);
+      border-bottom: 1px solid rgba(255,215,0,0.25);
     }
     .footer-logo { height: 64px; width: 64px; border-radius: 50%; object-fit: cover; object-position: top center; border: 3px solid var(--yellow); margin-bottom: 12px; }
-    .footer-brand h3 { color: var(--red-dark); font-size: 17px; margin-bottom: 5px; text-shadow: 0 1px 3px rgba(255,255,255,0.4); }
-    .footer-brand p  { font-size: 12px; color: var(--red-dark); font-family: 'Noto Sans Tamil', sans-serif; font-weight: 600; }
-    .footer-links h4 { color: var(--red-dark); font-size: 13px; margin-bottom: 14px; letter-spacing: 0.5px; font-weight: 800; }
-    .footer-links a  { display: block; font-size: 12px; color: var(--red-dark); margin-bottom: 7px; transition: var(--transition); font-weight: 600; }
-    .footer-links a:hover { color: var(--red-vivid); padding-left: 4px; }
+    .footer-brand h3 { color: var(--yellow); font-size: 17px; margin-bottom: 5px; }
+    .footer-brand p  { font-size: 12px; color: rgba(255,230,150,0.75); font-family: 'Noto Sans Tamil', sans-serif; font-weight: 600; }
+    .footer-links h4 { color: var(--yellow); font-size: 13px; margin-bottom: 14px; letter-spacing: 0.5px; font-weight: 800; }
+    .footer-links a  { display: block; font-size: 12px; color: rgba(255,215,0,0.75); margin-bottom: 7px; transition: var(--transition); font-weight: 600; }
+    .footer-links a:hover { color: #FFD700; padding-left: 4px; }
     .footer-bottom {
       max-width: 1100px; margin: 20px auto 0;
-      text-align: center; font-size: 12px; color: var(--red-dark);
+      text-align: center; font-size: 12px; color: rgba(255,220,130,0.65);
       font-weight: 600;
     }
 
@@ -570,11 +574,11 @@
 
     /* ── ANNOUNCEMENT BANNER ── */
     .announce {
-      background: linear-gradient(135deg, var(--yellow), var(--yellow-dark));
+      background: linear-gradient(90deg, #6B0000, #B80000, #B84000, #C8A000, #B84000, #B80000, #6B0000);
       padding: 16px 24px; text-align: center;
-      border-bottom: 3px solid var(--red);
+      border-bottom: 3px solid var(--yellow);
     }
-    .announce p { font-size: 14px; font-weight: 700; color: var(--red-dark); }
+    .announce p { font-size: 14px; font-weight: 700; color: var(--yellow); }
 
     /* ── RESPONSIVE ── */
     @media(max-width:768px) {
@@ -595,20 +599,20 @@
     /* ── ABOUT CARDS ── */
     .leader-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 24px; }
     .leader-card {
-      background: white; border-radius: var(--radius);
+      background: linear-gradient(135deg, #2A0D00, #3A1500); border-radius: var(--radius);
       padding: 28px 20px; text-align: center;
       box-shadow: var(--shadow); border-top: 4px solid var(--yellow);
       transition: var(--transition);
     }
-    .leader-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .leader-card:hover { transform: translateY(-5px); box-shadow: 0 10px 36px rgba(107,0,0,0.6), 0 0 14px rgba(255,215,0,0.2); }
     .leader-photo {
       width: 110px; height: 110px; border-radius: 50%;
       object-fit: cover; object-position: top center;
-      border: 4px solid var(--red);
-      box-shadow: 0 4px 16px rgba(204,0,0,0.25);
+      border: 4px solid var(--yellow);
+      box-shadow: 0 4px 16px rgba(107,0,0,0.5);
       margin: 0 auto 14px;
     }
-    .leader-name  { font-size: 16px; font-weight: 800; color: var(--red); margin-bottom: 4px; }
+    .leader-name  { font-size: 16px; font-weight: 800; color: var(--yellow); margin-bottom: 4px; }
     .leader-title { font-size: 12px; color: var(--muted); font-family: 'Noto Sans Tamil', sans-serif; }
 
     /* ── WAVE DIVIDER ── */
@@ -770,8 +774,8 @@
 
     /* ── SCROLLBAR ── */
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #fff5f5; }
-    ::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+    ::-webkit-scrollbar-track { background: #1A0A00; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #B80000, #B84000); border-radius: 3px; }
 
     /* ── NAVBAR LOGO WRAP ── */
     .navbar-logo-wrap {
@@ -1262,7 +1266,7 @@
     <h1>📊 Ward Issues Dashboard</h1>
     <p>ஆர்.கே. நகர் தொகுதி – புகார் நிலை கண்ணோட்டம்</p>
   </div>
-  <div class="section" style="background:#FFF5F5;">
+  <div class="section" style="background:linear-gradient(135deg,#1A0A00,#2A0D00);">
     <div class="container">
       <div class="admin-stat-grid" id="dashStats"></div>
       <div class="section-title">
@@ -1308,11 +1312,11 @@
 <div id="tab-admin" class="tab-pane">
 
   <!-- LOGIN -->
-  <div id="loginPanel" style="min-height:80vh;display:flex;align-items:center;justify-content:center;padding:40px 20px;background:linear-gradient(135deg,#fff5f5,#fffde7);">
+  <div id="loginPanel" style="min-height:80vh;display:flex;align-items:center;justify-content:center;padding:40px 20px;background:linear-gradient(135deg,#1A0A00,#2A0D00,#3A1500);">
     <div class="admin-login-card">
       <img id="adminLogoImg" src="" alt="TVK" class="admin-logo" style="display:none;">
-      <div id="adminLogoFall" style="width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,#CC0000,#8B0000);border:4px solid var(--red);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:var(--yellow);margin:0 auto 20px;letter-spacing:2px;">TVK</div>
-      <h2 style="color:var(--red);margin-bottom:6px;font-size:24px;font-weight:800;">Admin Login</h2>
+      <div id="adminLogoFall" style="width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,#6B0000,#B84000);border:4px solid var(--yellow);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:var(--yellow);margin:0 auto 20px;letter-spacing:2px;">TVK</div>
+      <h2 style="color:var(--yellow);margin-bottom:6px;font-size:24px;font-weight:800;">Admin Login</h2>
       <p style="font-size:13px;color:var(--muted);margin-bottom:28px;font-family:'Noto Sans Tamil',sans-serif;">TVK Complaint Box – நிர்வாக நுழைவு</p>
       <div class="form-group" style="text-align:left;">
         <label>Username / பயனர் பெயர்</label>
